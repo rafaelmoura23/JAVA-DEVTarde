@@ -1,0 +1,3 @@
+bolean - comparar situações
+númerica
+string - letras
