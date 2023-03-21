@@ -134,11 +134,11 @@ public class Exercicio1 {
 
         public void exe10(){
         System.out.print("Informe a letra:");
-        String letra = sc. nextLine();
-        if ( letra=="a" || letra=="e" || letra=="i" || letra=="o" || letra=="u") {
-        System.out.print("Vogal");
+        String letra = sc.nextLine();
+        if ( letra.equals("a") || letra.equals("e") || letra.equals("i") || letra.equals("o") || letra.equals("u")){
+        System.out.println("A letra é vogal");
         } else {
-        System.out.print("Consoante");
+        System.out.println("A letra é consoante");
         }
     
         }
