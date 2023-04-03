@@ -3,6 +3,7 @@ package ExemploVetores;
 import java.util.Scanner;
 
 public class Vetores {
+    Scanner sc = new Scanner(System.in);
     //criando metodo
     public void exemplo1() {      //metodo letra minuscula (exemplo1)  // classe primeira letra maiuscula
         //criando um vetor 
@@ -34,16 +35,19 @@ public class Vetores {
 
     public void exercicio1() {
         double numerosReais[] = new double[10];
-        numerosReais[0] = 25;
-        numerosReais[1] = 50.7;
-        numerosReais[2] = 30.9;
-        numerosReais[3] = 40.77;
-        numerosReais[4] = 50.4;
-        numerosReais[5] = 68.5;
-        numerosReais[6] = 77.7;
-        numerosReais[7] = 88.6;
-        numerosReais[8] = 95.6;
-        numerosReais[9] = 100.5;
+        System.out.println("Informe os Números:");
+        numerosReais[0] = sc.nextDouble();
+        numerosReais[1] = sc.nextDouble();
+        numerosReais[2] = sc.nextDouble();
+        numerosReais[3] = sc.nextDouble();
+        numerosReais[4] = sc.nextDouble();
+        numerosReais[5] = sc.nextDouble();
+        numerosReais[6] = sc.nextDouble();
+        numerosReais[7] = sc.nextDouble();
+        numerosReais[8] = sc.nextDouble();
+        numerosReais[9] = sc.nextDouble();
+        
+        System.out.println("Os números são: (Ao contrário do que foi digitado)");
         System.out.println(numerosReais[9]);
         System.out.println(numerosReais[8]);
         System.out.println(numerosReais[7]);
@@ -57,7 +61,6 @@ public class Vetores {
     }
 
     public void exercicio2() {
-        Scanner sc = new Scanner(System.in);
         System.out.print("Informe a nota 1:");
         double nota1 = sc.nextInt();
         System.out.print("Informe a nota 2:");

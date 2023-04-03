@@ -90,6 +90,7 @@ public class Exercicio1 {
         }
 
     }
+    
 
     public void exe7(){
         System.out.print("Informe  a nota 1 do Aluno:");
