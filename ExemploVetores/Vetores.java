@@ -33,7 +33,7 @@ public class Vetores {
         System.out.println("O vetor é : posição[4]="+novoValores[4]);
 }
 
-    public void exercicio1() {
+    public void exemplo3() {
         double numerosReais[] = new double[10];
         System.out.println("Informe os Números:");
         numerosReais[0] = sc.nextDouble();
@@ -60,7 +60,7 @@ public class Vetores {
         System.out.println(numerosReais[0]);
     }
 
-    public void exercicio2() {
+    public void exemplo4() {
         System.out.print("Informe a nota 1:");
         double nota1 = sc.nextInt();
         System.out.print("Informe a nota 2:");
@@ -80,6 +80,195 @@ public class Vetores {
         System.out.println("nota 4 é igual a "+notas[3]);
         double mediaAluno = (nota1+nota2+nota3+nota4)/4;
         System.out.println("A média do aluno é: "+mediaAluno);
+    }
+
+// A partir do exercicio abaixo é a lista extra;
+
+    public void exercicio1() {
+
+        int vetorA[] = new int[5];
+        vetorA[0] = 10;
+        vetorA[1] = 20;
+        vetorA[2] = 30;
+        vetorA[3] = 40;
+        vetorA[4] = 50;
+        
+        int vetorB[] = vetorA;
+
+        System.out.println("Os Números do Vetor A São:");
+        System.out.println(vetorA[0]);
+        System.out.println(vetorA[1]);
+        System.out.println(vetorA[2]);
+        System.out.println(vetorA[3]);
+        System.out.println(vetorA[4]);
+
+        System.out.println("Os Números do Vetor B são:");
+        System.out.println(vetorB[0]);
+        System.out.println(vetorA[1]);
+        System.out.println(vetorA[2]);
+        System.out.println(vetorA[3]);
+        System.out.println(vetorA[4]);
+    }
+
+    public void exercicio2() {
+
+        int vetorA[] = new int[8];
+        vetorA[0] = 1;
+        vetorA[1] = 2;
+        vetorA[2] = 3;
+        vetorA[3] = 4;
+        vetorA[4] = 5;
+        vetorA[5] = 6;
+        vetorA[6] = 7;
+        vetorA[7] = 8;
+
+        System.out.println("Os Números do Vetor A São:");
+        System.out.println(vetorA[0]);
+        System.out.println(vetorA[1]);
+        System.out.println(vetorA[2]);
+        System.out.println(vetorA[3]);
+        System.out.println(vetorA[4]);
+        System.out.println(vetorA[5]);
+        System.out.println(vetorA[6]);
+        System.out.println(vetorA[7]);
+
+
+        int vetorB[] = new int[8];
+        vetorB[0] = vetorA[0] *2;
+        vetorB[1] = vetorA[1] *2;
+        vetorB[2] = vetorA[2] *2;
+        vetorB[3] = vetorA[3] *2;
+        vetorB[4] = vetorA[4] *2;
+        vetorB[5] = vetorA[5] *2;
+        vetorB[6] = vetorA[6] *2;
+        vetorB[7] = vetorA[7] *2;
+        
+        System.out.println("Os Números do Vetor B São:");
+        System.out.println(vetorB[0]);
+        System.out.println(vetorB[1]);
+        System.out.println(vetorB[2]);
+        System.out.println(vetorB[3]);
+        System.out.println(vetorB[4]);
+        System.out.println(vetorB[5]);
+        System.out.println(vetorB[6]);
+        System.out.println(vetorB[7]);
+    }
+
+    public void exercicio3() {
+
+        int vetorA[] = new int[15];
+        vetorA[0] = 1;
+        vetorA[1] = 2;
+        vetorA[2] = 3;
+        vetorA[3] = 4;
+        vetorA[4] = 5;
+        vetorA[5] = 6;
+        vetorA[6] = 7;
+        vetorA[7] = 8;
+        vetorA[8] = 9;
+        vetorA[9] = 10;
+        vetorA[10] = 11;
+        vetorA[11] = 12;
+        vetorA[12] = 13;
+        vetorA[13] = 14;
+        vetorA[14] = 15;
+
+        System.out.println("Os Números do Vetor A São:");
+        System.out.println(vetorA[0]);
+        System.out.println(vetorA[1]);
+        System.out.println(vetorA[2]);
+        System.out.println(vetorA[3]);
+        System.out.println(vetorA[4]);
+        System.out.println(vetorA[5]);
+        System.out.println(vetorA[6]);
+        System.out.println(vetorA[7]);
+        System.out.println(vetorA[8]);
+        System.out.println(vetorA[9]);
+        System.out.println(vetorA[10]);
+        System.out.println(vetorA[11]);
+        System.out.println(vetorA[12]);
+        System.out.println(vetorA[13]);
+        System.out.println(vetorA[14]);
+
+        int vetorB[] = vetorA;
+
+        System.out.println("Os Números do Vetor B São:");
+        System.out.println(vetorA[0]*vetorA[0]);
+        System.out.println(vetorA[1]* vetorA[1]);
+        System.out.println(vetorA[2]*vetorA[2]);
+        System.out.println(vetorA[3]*vetorA[3]);
+        System.out.println(vetorA[4]*vetorA[4]);
+        System.out.println(vetorA[5]*vetorA[5]);
+        System.out.println(vetorA[6]*vetorA[6]);
+        System.out.println(vetorA[7]*vetorA[7]);
+        System.out.println(vetorA[8]*vetorA[8]);
+        System.out.println(vetorA[9]*vetorA[9]);
+        System.out.println(vetorA[10]*vetorA[10]);
+        System.out.println(vetorA[11]*vetorA[11]);
+        System.out.println(vetorA[12]*vetorA[12]);
+        System.out.println(vetorA[13]*vetorA[13]);
+        System.out.println(vetorA[14]*vetorA[14]);
+    }
+
+    public void exercicio4() {
+
+        double vetorA[] = new double[15];
+        vetorA[0] = 4;
+        vetorA[1] = 9;
+        vetorA[2] = 16;
+        vetorA[3] = 25;
+        vetorA[4] = 36;
+        vetorA[5] = 49;
+        vetorA[6] = 64;
+        vetorA[7] = 81;
+        vetorA[8] = 100;
+        vetorA[9] = 144;
+        vetorA[10] = 169;
+        vetorA[11] = 196;
+        vetorA[12] = 225;
+        vetorA[13] = 256;
+        vetorA[14] = 289;
+
+        System.out.println("Os Números do Vetor A São:");
+        System.out.println(vetorA[0]);
+        System.out.println(vetorA[1]);
+        System.out.println(vetorA[2]);
+        System.out.println(vetorA[3]);
+        System.out.println(vetorA[4]);
+        System.out.println(vetorA[5]);
+        System.out.println(vetorA[6]);
+        System.out.println(vetorA[7]);
+        System.out.println(vetorA[8]);
+        System.out.println(vetorA[9]);
+        System.out.println(vetorA[10]);
+        System.out.println(vetorA[11]);
+        System.out.println(vetorA[12]);
+        System.out.println(vetorA[13]);
+        System.out.println(vetorA[14]);
+
+        double vetorB[] = vetorA;
+
+        System.out.println("Os Números do Vetor B São:");
+        System.out.println(Math.sqrt(vetorA[0]));
+        System.out.println(Math.sqrt(vetorA[1]));
+        System.out.println(Math.sqrt(vetorA[2]));
+        System.out.println(Math.sqrt(vetorA[3]));
+        System.out.println(Math.sqrt(vetorA[4]));
+        System.out.println(Math.sqrt(vetorA[5]));
+        System.out.println(Math.sqrt(vetorA[6]));
+        System.out.println(Math.sqrt(vetorA[7]));
+        System.out.println(Math.sqrt(vetorA[8]));
+        System.out.println(Math.sqrt(vetorA[9]));
+        System.out.println(Math.sqrt(vetorA[10]));
+        System.out.println(Math.sqrt(vetorA[11]));
+        System.out.println(Math.sqrt(vetorA[12]));
+        System.out.println(Math.sqrt(vetorA[13]));
+        System.out.println(Math.sqrt(vetorA[14]));
+
+
+
+
+        
     }
 
 }
