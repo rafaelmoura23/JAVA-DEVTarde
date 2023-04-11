@@ -264,11 +264,6 @@ public class Vetores {
         System.out.println(Math.sqrt(vetorA[12]));
         System.out.println(Math.sqrt(vetorA[13]));
         System.out.println(Math.sqrt(vetorA[14]));
-
-
-
-
-        
     }
 
 }
