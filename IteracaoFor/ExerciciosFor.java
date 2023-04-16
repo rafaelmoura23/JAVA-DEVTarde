@@ -43,6 +43,23 @@ public class ExerciciosFor {
             }
             System.out.println("A média é: " +media);
     }
+
+        public void exercicio6() {
+            double vetor[] = new double[4];
+            double media = 0;
+            for (int i = 0; i < vetor.length; i++) {
+                System.out.println("Digite as notas:");
+                vetor[i] = sc.nextDouble();
+            }
+            for (int i = 0; i < vetor.length; i++) {
+                System.out.println("Nota["+i+"]=" +vetor[i]);
+            }
+            for (int i = 0; i < vetor.length; i++) {
+                media+=vetor[i]/4;
+           }
+
 }
+}
+
 
 
