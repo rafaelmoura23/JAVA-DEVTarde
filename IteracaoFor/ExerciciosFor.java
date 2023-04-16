@@ -30,17 +30,18 @@ public class ExerciciosFor {
 
         public void exercicio3() {
             double vetor[] = new double[4];
+            double media = 0;
             for (int i = 0; i < vetor.length; i++) {
-                System.out.println("Digite as notas");
+                System.out.println("Digite as notas:");
                 vetor[i] = sc.nextDouble();
             }
             for (int i = 0; i < vetor.length; i++) {
                 System.out.println("Nota["+i+"]=" +vetor[i]);
             }
             for (int i = 0; i < vetor.length; i++) {
-                double media = vetor[i]/4;
-                System.out.println("As médias são: " +media);
+                 media+=vetor[i]/4;  
             }
+            System.out.println("A média é: " +media);
     }
 }
 
