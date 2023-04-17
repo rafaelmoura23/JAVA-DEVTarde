@@ -47,6 +47,9 @@ public class ExerciciosFor {
         }
 
         public void exercicio4() {
+
+            } 
+        public void exercicio5() {
             int vetor[] = new int[20];
             int par = 0;
             int impar = 0;
@@ -64,8 +67,6 @@ public class ExerciciosFor {
                     System.out.println("O número " +vetor[i]+ " é impar");
                 }   
             }
-            } 
-        public void exercicio5() {
 
             
         }
