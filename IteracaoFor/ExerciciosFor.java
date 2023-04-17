@@ -2,6 +2,8 @@ package IteracaoFor;
 
 import java.util.Scanner;
 
+import ExemploVetores.Vetores;
+
 public class ExerciciosFor {
     Scanner sc = new Scanner (System.in);
 
@@ -26,7 +28,7 @@ public class ExerciciosFor {
                 System.out.println("vetor["+i+"]=" +vetor[i]);
             }  
            
-    }
+        }
 
         public void exercicio3() {
             double vetor[] = new double[4];
@@ -42,7 +44,31 @@ public class ExerciciosFor {
                  media+=vetor[i]/4;  
             }
             System.out.println("A média é: " +media);
-    }
+        }
+
+        public void exercicio4() {
+            int vetor[] = new int[20];
+            int par = 0;
+            int impar = 0;
+            for (int i = 0; i <vetor.length; i++) {
+                System.out.println("Digite um Número:");
+                vetor[i] = sc.nextInt();
+            }
+            for (int i = 0; i < vetor.length; i++) {
+                if(vetor[i] % 2 ==0){
+                    par += vetor[i];
+                    System.out.println("O número " +vetor[i]+ " é par");
+                }
+                else{
+                    impar += vetor[i];
+                    System.out.println("O número " +vetor[i]+ " é impar");
+                }   
+            }
+            } 
+        public void exercicio5() {
+
+            
+        }
 
         public void exercicio6() {
             double vetor[] = new double[4];
@@ -57,9 +83,22 @@ public class ExerciciosFor {
             for (int i = 0; i < vetor.length; i++) {
                 media+=vetor[i]/4;
            }
+        }
+
+        public void exercicio7() {
+            
+        }
+
+        public void exercicio8() {
+            
+
+        }
+
+        public void exercicio9() {
 
 }
 }
+
 
 
 
