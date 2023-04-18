@@ -2,12 +2,10 @@ package IteracaoFor;
 
 import java.util.Scanner;
 
-import ExemploVetores.Vetores;
-
 public class ExerciciosFor {
     Scanner sc = new Scanner (System.in);
 
-        public void exercicio1() {
+        public void exercicio1() { //ok
             int vetor[] = new int[5];
             for (int i = 0; i < vetor.length; i++) {
                 System.out.println("vetor["+i+"]=");
@@ -18,7 +16,7 @@ public class ExerciciosFor {
             }
         }
 
-        public void exercicio2() {  
+        public void exercicio2() {   //ok
             double vetor[] = new double[10];
             for (int i = 0; i < vetor.length; i++) {
                 System.out.println("vetor["+i+"]=");
@@ -26,50 +24,113 @@ public class ExerciciosFor {
             }
             for (int i = vetor.length-1; i>=0; i--) {
                 System.out.println("vetor["+i+"]=" +vetor[i]);
-            }  
-           
+            }   
         }
 
-        public void exercicio3() {
-            double vetor[] = new double[4];
+        public void exercicio3() {  
+            //criar um vetor para receber as 4 notas
+            double vetorNotas[] = new double[4];
+            //preencher o vetor com as 4 notas "fori"
+            for (int i = 0; i < vetorNotas.length; i++) {
+                //pedir para digitar as notas e ler a nota digitada
+                System.out.println("Digite a nota "+(i+1)+" do aluno:");
+                vetorNotas[i] = sc.nextDouble();
+            }
+            //printar as notas e calcular a média "fori"
             double media = 0;
-            for (int i = 0; i < vetor.length; i++) {
-                System.out.println("Digite as notas:");
-                vetor[i] = sc.nextDouble();
+            for (int i = 0; i < vetorNotas.length; i++) {
+                System.out.println("Nota "+(i+1)+"=" +vetorNotas[i]);
+                media+=vetorNotas[i]; //acumular o valor das notas do vetor
             }
-            for (int i = 0; i < vetor.length; i++) {
-                System.out.println("Nota["+i+"]=" +vetor[i]);
-            }
-            for (int i = 0; i < vetor.length; i++) {
-                 media+=vetor[i]/4;  
-            }
-            System.out.println("A média é: " +media);
+            //dividir a media pelo número de notas do vetor
+            media/=vetorNotas.length;
+            System.out.println("A média do Aluno é: " +media);
         }
 
-        public void exercicio4() {
-
-            } 
-        public void exercicio5() {
-            int vetor[] = new int[20];
-            int par = 0;
-            int impar = 0;
-            for (int i = 0; i <vetor.length; i++) {
-                System.out.println("Digite um Número:");
-                vetor[i] = sc.nextInt();
-            }
-            for (int i = 0; i < vetor.length; i++) {
-                if(vetor[i] % 2 ==0){
-                    par += vetor[i];
-                    System.out.println("O número " +vetor[i]+ " é par");
+        public void exercicio4() {   //ler 10 caracteres e contar as consoantes "k","l","m", "n", "o","p","q", "r", "s","t", "u", "v", "w","x", "y", "z"
+            // criar um vetor com 10 caracteres
+            String letras[] = new String[]{"a", "b", "c","d", "e", "f", "g","h","i", "j"};
+            //percorrer o vetor para achar as consoantes "fori"
+            int cont= 0; //contador para consoantes
+            for (int i = 0; i < letras.length; i++) {
+                //tomada de decisão vogal ou consoante
+                if(letras[i]!="a" && letras[i]!="e" && letras[i]!="i" && letras[i]!="o" && letras[i]!="u"){
+                    System.out.println(letras[i] +" é consoante");
+                    cont++; //se for consoante, irá contar o número de consoantes
                 }
-                else{
-                    impar += vetor[i];
-                    System.out.println("O número " +vetor[i]+ " é impar");
-                }   
             }
+            //mostrar o número de consoantes
+            System.out.println("O número de consoantes é " +cont);
+        }
 
+        public void exercicio4extra() { //contando consoantes de uma palavra
+        //usuario vai digitar a palavra
+        System.out.println("Digite uma palavra");
+        String letras = sc.next(); // nextLine - lê a linha inteira  next - lê apenas a próxima palavra
+        letras = letras.toLowerCase(); //transforma as letras em minusculas 
+        //percorrer o vetor para achar as consoantes "fori"
+        int cont= 0; //contador para consoantes
+        for (int i = 0; i < letras.length(); i++) {
+            //tomada de decisão vogal ou consoante
+            char c = letras.charAt(i); //
+
+            if(c!='a' && c!='e' && c!='i' && c!='o' && c!='u'){
+                System.out.println(c +" é consoante");
+                cont++; //se for consoante, irá contar o número de consoantes
+            }
+        }
+        //mostrar o número de consoantes
+        System.out.println("O número de consoantes é " +cont);
             
         }
+
+        public void exercicio5() {   //determinar pares e impares em outros vetores
+            int vetorNumeros[] = new int[20];
+            int contPar=0; //contador de numeros pares  
+            int contImpar=0; //contador de numeros impares
+            //percorrer o vetor e contar os numeros pares e impares
+            for (int i = 0; i <vetorNumeros.length; i++) {
+                System.out.println("Digite um Número:");
+                vetorNumeros[i] = sc.nextInt();
+            }
+            for (int i = 0; i < vetorNumeros.length; i++) {
+                if(vetorNumeros[i]%2==0){
+                    contPar++;  //guarda os numeros pares
+                }
+                else{
+                    contImpar++; //guarda os numeros impares
+                }   
+            }   
+            int nPar[] = new int[contPar];
+            int nImpar[] = new int[contImpar];
+            //distribuir os numeros nos vetores par e impar
+            contPar=0;
+            contImpar=0;
+            for (int i = 0; i < vetorNumeros.length; i++) {
+                if(vetorNumeros[i]%2==0){
+                    nPar[contPar]=vetorNumeros[i];
+                    contPar++;
+                }
+                else{
+                    nImpar[contImpar]=vetorNumeros[i];
+                    contImpar++;
+                } 
+            }
+            for (int i = 0; i < vetorNumeros.length; i++) {
+                System.out.println("vetor["+i+"]=" +vetorNumeros[i]);   
+            }
+            for (int i = 0; i < nPar.length; i++) {
+                System.out.println("vetorPar["+i+"]=" +nPar[i]);   
+            }
+            for (int i = 0; i < nImpar.length; i++) {
+                System.out.println("vetorImpar["+i+"]=" +nImpar[i]);   
+            }
+        }
+
+
+
+
+
 
         public void exercicio6() {
             double vetor[] = new double[4];
@@ -79,7 +140,7 @@ public class ExerciciosFor {
                 vetor[i] = sc.nextDouble();
             }
             for (int i = 0; i < vetor.length; i++) {
-                System.out.println("Nota["+i+"]=" +vetor[i]);
+                System.out.println("Número["+i+"]=" +vetor[i]);
             }
             for (int i = 0; i < vetor.length; i++) {
                 media+=vetor[i]/4;
@@ -87,18 +148,57 @@ public class ExerciciosFor {
         }
 
         public void exercicio7() {
-            
+            int vetor[] = new int[5];
+            int soma = 0;
+            int mult = 0;
+            for (int i = 0; i < vetor.length; i++) {
+                System.out.print("Digite os Números:");
+                vetor[i] = sc.nextInt();
+            }
+            for (int i = 0; i < vetor.length; i++) {
+                System.out.println("Número["+i+"]=" +vetor[i]);
+            }
+            for (int i = 0; i < vetor.length; i++) {
+                soma+=vetor[i];
+                mult*=vetor[i];
+            }
+            System.out.println("A soma é: " +soma);
+            System.out.println("A multiplicação é: " +mult);  
         }
 
         public void exercicio8() {
-            
-
+            int vetor[] = new int[5];
+            int idade = 0;
+            double altura = 0;
+            for (int i = 0; i < vetor.length; i++) {
+                System.out.print("Digite a Idade:");
+                idade = sc.nextInt();
+                System.out.print("Digite a Altura:");
+                altura = sc.nextDouble();
+            }
+            for (int i = 0; i< vetor.length; i++) {
+            System.out.println("Altura = " + altura);
+            System.out.println("Idade = " + idade);
+            } 
         }
 
-        public void exercicio9() {
+        public void exercicio9() { 
+            int vetor[] = new int[10];
+            for (int i = 0; i < vetor.length; i++) {
+                System.out.print("Digite os Números:");
+                vetor[i] = sc.nextInt();             
+            }
+            int quadrado =0;
+            int soma= 0;
+            for (int i = 0; i < vetor.length; i++) {
+                quadrado = vetor[i]*vetor[i];
+                soma+=quadrado;
+                }
+                System.out.println("A soma dos quadrado é: " +soma);
+            }
+}
 
-}
-}
+
 
 
 
