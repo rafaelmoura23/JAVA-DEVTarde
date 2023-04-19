@@ -169,20 +169,21 @@ public class ExerciciosFor {
         }
 
         public void exercicio8() {
-            int vetor[] = new int[5];
-            int idade = 0;
-            double altura = 0;
-            for (int i = 0; i < vetor.length; i++) {
+            int vetorIdade[] = new int[5];
+            double vetorAltura[] = new double[5];
+            for (int i = 0; i < vetorIdade.length; i++) {
                 System.out.print("Digite a Idade:");
-                idade = sc.nextInt();
-                System.out.print("Digite a Altura:");
-                altura = sc.nextDouble();
+                vetorIdade[i] = sc.nextInt();
             }
-            for (int i = 0; i< vetor.length; i++) {
-            System.out.println("Altura = " + altura);
-            System.out.println("Idade = " + idade);
-            } 
-        }
+            for (int i = 0; i < vetorAltura.length; i++) {
+                System.out.print("Digite a Altura:");
+                vetorAltura[i] = sc.nextDouble();
+                int idade = vetorIdade[i];
+                double altura = vetorAltura[i];
+                System.out.println(idade);
+                System.out.println(altura);
+            }
+            }
 
         public void exercicio9() {    //ok
             int vetor[] = new int[10];
