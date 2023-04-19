@@ -134,13 +134,6 @@ public class ExerciciosFor {
             
             }
 
-            
-
-
-
-
-
-
         public void exercicio6() {
             double vetor[] = new double[4];
             double media = 0;
@@ -158,8 +151,6 @@ public class ExerciciosFor {
 
         public void exercicio7() {
             int vetor[] = new int[5];
-            int soma = 0;
-            int mult = 0;
             for (int i = 0; i < vetor.length; i++) {
                 System.out.print("Digite os Números:");
                 vetor[i] = sc.nextInt();
@@ -167,12 +158,14 @@ public class ExerciciosFor {
             for (int i = 0; i < vetor.length; i++) {
                 System.out.println("Número["+i+"]=" +vetor[i]);
             }
+            int soma = 0;
+            int mult = 1;
             for (int i = 0; i < vetor.length; i++) {
                 soma+=vetor[i];
                 mult*=vetor[i];
             }
+            System.out.println("A multiplicação é: " +mult);
             System.out.println("A soma é: " +soma);
-            System.out.println("A multiplicação é: " +mult);  
         }
 
         public void exercicio8() {
@@ -191,7 +184,7 @@ public class ExerciciosFor {
             } 
         }
 
-        public void exercicio9() { 
+        public void exercicio9() {    //ok
             int vetor[] = new int[10];
             for (int i = 0; i < vetor.length; i++) {
                 System.out.print("Digite os Números:");
