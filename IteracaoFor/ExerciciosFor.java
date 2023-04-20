@@ -149,7 +149,7 @@ public class ExerciciosFor {
            }
         }
 
-        public void exercicio7() {
+        public void exercicio7() {   //ok
             int vetor[] = new int[5];
             for (int i = 0; i < vetor.length; i++) {
                 System.out.print("Digite os Números:");
