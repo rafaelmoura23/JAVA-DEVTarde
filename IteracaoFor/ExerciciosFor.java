@@ -168,21 +168,21 @@ public class ExerciciosFor {
             System.out.println("A soma é: " +soma);
         }
 
-        public void exercicio8() {
-            int vetorIdade[] = new int[5];
-            double vetorAltura[] = new double[5];
-            for (int i = 0; i < vetorIdade.length; i++) {
-                System.out.print("Digite a Idade:");
-                vetorIdade[i] = sc.nextInt();
-            }
-            for (int i = 0; i < vetorAltura.length; i++) {
+        public void exercicio8() {  //ok
+            int idades[] = new int[5];
+            double alturas[] = new double[5];
+
+            for (int i = 0; i < 5; i++) {
+                System.out.print("Digite a Idade " + (i+1) + ":" );
+                idades[i] = sc.nextInt();
                 System.out.print("Digite a Altura:");
-                vetorAltura[i] = sc.nextDouble();
-                int idade = vetorIdade[i];
-                double altura = vetorAltura[i];
-                System.out.println(idade);
-                System.out.println(altura);
+                alturas[i] = sc.nextDouble();
             }
+            for (int i = 4; i>=0; i--) {
+                System.out.println("Pessoa " + (i+1) + " - Idade: " + idades[i] + " | Altura: " + alturas[i]);
+                
+            }
+                
             }
 
         public void exercicio9() {    //ok
