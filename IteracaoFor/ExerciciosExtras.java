@@ -21,6 +21,19 @@ public class ExerciciosExtras {
     }
 
     public void exercicio2() {
+
+        System.out.print("Digite o NOME: ");
+        String nome = sc.nextLine();
+        System.out.print("Digite a IDADE: ");
+        int idade = sc.nextInt();
+        System.out.print("Digite o SALÁRIO: ");
+        double salario = sc.nextDouble();
+        System.out.print("Digite o SEXO: ");
+        String sexo = sc.next();
+        System.out.print("Digite o ESTADO CIVIL: ");
+        String estadoCivil = sc.next();
+
+        
         
     }
 
