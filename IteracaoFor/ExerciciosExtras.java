@@ -86,6 +86,13 @@ public class ExerciciosExtras {
     }
 
     public void exercicio6() {
+
+        for (int i = 1; i < 1000; i++) {
+            if(i % 3 == 0){   //todo número que dividido por 3 der resto 0
+                System.out.println(i);
+            }
+            
+        }
         
     }
 
