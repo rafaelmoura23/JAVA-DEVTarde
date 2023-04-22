@@ -109,16 +109,16 @@ public class ExerciciosExtras {
         int expoente =sc.nextInt();
 
         int operacao = 1;  // se for 0 a multiplicação será 0
-        
+
         for (int i = 1; i <= expoente; i++) {
-            operacao*=base;  
+        // na primeira vez operacao recebe 1 e faz vezes a base, após isso operacao recebe o numero da operacao anterior
+        // exemplo!  (base=2) e (expoente=3) operacao=1, ou seja, 2*1 = 2, após isso operacao vale 2
+        //agora operacao recebe o reultado=2, ou seja, 2*2 = 4, após isso operacao vale 4
+        //agora operacao recebe o resultado=4, ou seja, 2*4= 8...
+        operacao = base*operacao;
+            System.out.println("operação= " +operacao);
         }
-
         System.out.println("O número " + base + " elevado a " + expoente + " é igual a " + operacao);
-
-
-
-
     }
 
 
