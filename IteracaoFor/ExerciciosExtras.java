@@ -94,7 +94,6 @@ public class ExerciciosExtras {
         }
     }
 
-
     public void exercicio7() {
         System.out.println("Digite o Primeiro número: "); 
         int primeiroNumero =sc.nextInt();
