@@ -65,6 +65,7 @@ public class ExerciciosExtras {
 
     public void exercicio3() {
         
+        
     }
 
     public void exercicio4() {
@@ -72,8 +73,17 @@ public class ExerciciosExtras {
     }
 
     public void exercicio5() {
-        
+        int numeros[] = new int[8];
+        int maior = 0;
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.print("Digite o Número " +(i+1)+ ":");
+            numeros[i] = sc.nextInt();
+            if(numeros[i] > maior){
+                maior=numeros[i];
+        }  
     }
+    System.out.println("O maior número é: " + maior);
+}
 
     public void exercicio6() {
         
