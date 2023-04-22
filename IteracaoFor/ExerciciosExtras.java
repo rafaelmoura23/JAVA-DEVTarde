@@ -90,14 +90,26 @@ public class ExerciciosExtras {
         for (int i = 1; i < 1000; i++) {
             if(i % 3 == 0){   //todo número que dividido por 3 der resto 0
                 System.out.println(i);
-            }
-            
+            }  
         }
-        
     }
 
+
     public void exercicio7() {
-        
+        System.out.println("Digite o Primeiro número: "); 
+        int primeiroNumero =sc.nextInt();
+
+        System.out.println("Digite o Segundo número: "); 
+        int segundoNumero =sc.nextInt();
+
+        int menorNumero = Math.min(primeiroNumero, segundoNumero);  //Math.min é usado para determinar o menor dos números
+        int maiorNumero = Math.max(primeiroNumero, segundoNumero);  //Math.max é utilizado para determinar o maior entre os dois números
+
+        System.out.println("No intervalo entre " +primeiroNumero+ " e " +segundoNumero+ " estão os números abaixo: "); 
+
+        for (int i = menorNumero; i <= maiorNumero; i++) { // i começa do menorNumero e o laço se repete até chegar no maiorNúmero
+            System.out.println(i);
+        } 
     }
 
     public void exercicio8() {
