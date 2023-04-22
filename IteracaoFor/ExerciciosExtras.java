@@ -21,7 +21,6 @@ public class ExerciciosExtras {
     }
 
     public void exercicio2() {
-
         System.out.print("Digite o NOME: ");
         String nome = sc.nextLine();
         System.out.print("Digite a IDADE: ");
