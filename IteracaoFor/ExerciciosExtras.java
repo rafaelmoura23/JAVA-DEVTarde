@@ -74,16 +74,16 @@ public class ExerciciosExtras {
 
     public void exercicio5() {
         int numeros[] = new int[8];
-        int maior = 0;
+        int numeroMaior = 0;
         for (int i = 0; i < numeros.length; i++) {
             System.out.print("Digite o Número " +(i+1)+ ":");
             numeros[i] = sc.nextInt();
-            if(numeros[i] > maior){
-                maior=numeros[i];
-        }  
+            if(numeros[i] > numeroMaior){   // o número digitado(numeros[i]) é comparado ao valor da váriavel 'númeroMaior', quando o valor de 'números'
+                numeroMaior=numeros[i];     // for maior que o valor da variavel 'numeroMaior' então o valor será guardado na variável 'numeroMaior';
+        }                                   // e no final o número maior entre os números digitados será printado, ou seja, seráo ultimo guardado na variável
     }
-    System.out.println("O maior número é: " + maior);
-}
+    System.out.println("O maior número é: " + numeroMaior);
+    }
 
     public void exercicio6() {
         
@@ -94,7 +94,12 @@ public class ExerciciosExtras {
     }
 
     public void exercicio8() {
-        
+        System.out.println("Digite o número: ");
+        int n =sc.nextInt();
+        for (int i = 1; i <= 10; i++) {
+            int produto = i*n;
+            System.out.println(i + " X " + n + " = " + produto);
+        }
     }
 
     public void exercicio9() {
