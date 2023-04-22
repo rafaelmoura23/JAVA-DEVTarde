@@ -97,14 +97,30 @@ public class ExerciciosExtras {
         System.out.println("Digite o número: ");
         int n =sc.nextInt();
         for (int i = 1; i <= 10; i++) {
-            int produto = i*n;
-            System.out.println(i + " X " + n + " = " + produto);
+            int multiplicacao = i*n;
+            System.out.println(i + " X " + n + " = " + multiplicacao);
         }
     }
 
     public void exercicio9() {
+        System.out.println("Digite o número da BASE: ");
+        int base =sc.nextInt();
+        System.out.println("Digite o número do EXPOENTE: ");
+        int expoente =sc.nextInt();
+
+        int operacao = 1;  // se for 0 a multiplicação será 0
         
+        for (int i = 1; i <= expoente; i++) {
+            operacao*=base;  
+        }
+
+        System.out.println("O número " + base + " elevado á " + expoente + " é igual a " + operacao);
+
+
+
+
     }
+
 
     public void exercicio10() {
         

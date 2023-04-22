@@ -3,7 +3,7 @@ package IteracaoFor;
 public class App {
     public static void main(String[] args) {
         ExerciciosExtras obj2 = new ExerciciosExtras();
-        obj2. exercicio8();
+        obj2. exercicio9();
     }
 }
 
