@@ -44,27 +44,24 @@ public class ExerciciosExtras {
     	System.out.println("Informe o seu SALÁRIO:");
     	salario=sc.nextDouble();}
 
-        System.out.println("Informe o seu SEXO: ");
+        System.out.println("Informe o seu SEXO:  m-masculino | f-feminino ");
         sexo=sc.next();
         while(!sexo.equalsIgnoreCase("f") && !sexo.equalsIgnoreCase("m")) {   // equalsIgnoreCase = diferente de, porém em equals;
     	System.out.println("Informe o seu SEXO:");
     	sexo=sc.next();}
 
-        System.out.println("Informe o seu ESTADO CIVIL: ");
+        System.out.println("Informe o seu ESTADO CIVIL: s-solteiro | c-casado | v-viuvo | d- divorciado");
         estadoCivil=sc.next();
         while(!estadoCivil.equalsIgnoreCase("s") && !estadoCivil.equalsIgnoreCase("c") && !estadoCivil.equalsIgnoreCase("v") && !estadoCivil.equalsIgnoreCase("d")) {   
-    	System.out.println("Informe o seu ESTADO CIVIL:");
+    	System.out.println("Informe o seu ESTADO CIVIL: s-solteiro | c-casado | v-viuvo | d- divorciado");
     	estadoCivil=sc.next();}
+
+        System.out.println("O seu NOME é: " +nome);
+        System.out.println("A sua IDADE é: " +idade);
+        System.out.println("O seu SALÁRIO é: " +salario);
+        System.out.println("O seu SEXO é: " +sexo);
+        System.out.println("O seu ESTADO CIVIL é: " +estadoCivil);
     }
-
-
-
-
-
-
-
-
-
 
     public void exercicio3() {
         
