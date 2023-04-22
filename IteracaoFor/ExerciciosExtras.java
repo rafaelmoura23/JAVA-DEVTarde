@@ -135,15 +135,35 @@ public class ExerciciosExtras {
     }
 
     public void exercicio11() {
-        System.out.println("Digite o número para ser calculado o seu FATORIAL: ");
-        int nFatorial = sc.nextInt();
+        System.out.print("Digite um número Inteiro: ");
+        int numero = sc.nextInt();
         
-        for (int i = 1; i < nFatorial; i++) {
-            
+        int fatorial = 1;
+        for (int i = 1; i <= numero; i++) {
+            fatorial*= i;
         }
+        System.out.println("O FATORIAL de " +numero+ " é igual a " +fatorial );
     }
 
+
+
+
+
+
+
+
+
+
     public void exercicio12() {
+        System.out.print("Digite um número: ");
+        int numero = sc.nextInt();
+
+        for (int i = 0; i < numero; i++) {
+        
+
+            
+        }
+
         
     }
     
