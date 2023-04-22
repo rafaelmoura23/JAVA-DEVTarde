@@ -114,7 +114,7 @@ public class ExerciciosExtras {
             operacao*=base;  
         }
 
-        System.out.println("O número " + base + " elevado á " + expoente + " é igual a " + operacao);
+        System.out.println("O número " + base + " elevado a " + expoente + " é igual a " + operacao);
 
 
 
