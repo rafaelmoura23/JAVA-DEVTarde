@@ -124,23 +124,23 @@ public class ExerciciosExtras {
     public void exercicio10() {
         System.out.println("Digite o número de termos desejados: ");
         int nTermos = sc.nextInt();
-        
         int termo1 = 0; 
         int termo2 = 1; // números inicias da sequência
-
         for (int i = 1; i <= nTermos; i++) {
-
-            int nextTermos = termo1+termo2; // nextTermos = 0+1   nextTermos=1
-
-            termo1=termo2;  // 0 = 1;
-            termo2=nextTermos; // 1 = nextTermos=1
-
+            int nextTermos = termo1+termo2; 
+            termo1=termo2;  
+            termo2=nextTermos;
             System.out.println("O termo " +i+ " é: " +nextTermos );
         }
     }
 
     public void exercicio11() {
+        System.out.println("Digite o número para ser calculado o seu FATORIAL: ");
+        int nFatorial = sc.nextInt();
         
+        for (int i = 1; i < nFatorial; i++) {
+            
+        }
     }
 
     public void exercicio12() {
