@@ -145,26 +145,24 @@ public class ExerciciosExtras {
         System.out.println("O FATORIAL de " +numero+ " é igual a " +fatorial );
     }
 
-
-
-
-
-
-
-
-
-
     public void exercicio12() {
-        System.out.print("Digite um número: ");
+        System.out.print("Digite um número inteiro: ");
         int numero = sc.nextInt();
 
-        for (int i = 0; i < numero; i++) {
-        
+        boolean primo = true;
 
-            
+        for (int i = 2; i <= numero/2; i++) {
+            if(numero % 1 == 0){
+                primo = false;
+                break;
+            }   
         }
-
+        if (primo){
+                System.out.println("O número " +numero+ " é PRIMO");
+        } else {
+            System.out.println("O número " +numero+ " não é PRIMO");
+        }
         
     }
-    
 }
+
