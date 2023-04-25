@@ -129,7 +129,7 @@ public class ExerciciosFor {
 
         public void exercicio5extra() {    //Gambiarra
             int numeros[] = new int[]{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
-            int nPar[]= new int[numeros.length];  //vetor criadocom o mesmo numero do vetor numeros
+            int nPar[]= new int[numeros.length];  //vetor criado com o mesmo numero do vetor numeros
             int nImpar[]= new int[numeros.length]; 
 
             for (int i = 0; i < numeros.length; i++) {
@@ -154,18 +154,26 @@ public class ExerciciosFor {
         }
 
         public void exercicio6() {
-            double vetor[] = new double[4];
-            double media = 0;
-            for (int i = 0; i < vetor.length; i++) {
-                System.out.println("Digite as notas:");
-                vetor[i] = sc.nextDouble();
+            double mediasAlunos[] = new double[10];  //10 alunos
+            double notasAlunos[] = new double[4];    //4 notas
+            int cont = 0;  //contador de medias maior ou igual a 7
+
+
+            for (int i = 0; i < mediasAlunos.length; i++) {
+                for (int j = 0; j < notasAlunos.length; j++) {
+                    System.out.println("Informe a Nota " +(j+1)+ " do Aluno " +(i+1)+":");
+                    notasAlunos[j] =sc.nextDouble();
+                    mediasAlunos[i]+=notasAlunos[j];
+                }
+                mediasAlunos[i]/=notasAlunos.length;
+                if(mediasAlunos[i]>=7){
+                    cont++;
+                }
             }
-            for (int i = 0; i < vetor.length; i++) {
-                System.out.println("Número["+i+"]=" +vetor[i]);
+            for (int i = 0; i < mediasAlunos.length; i++) {
+                System.out.println("A média do aluno " +(i+1) + " é:" +mediasAlunos[i]);
             }
-            for (int i = 0; i < vetor.length; i++) {
-                media+=vetor[i]/4;
-           }
+            System.out.println("Os Alunos com Nota >=7 são: " + cont);
         }
 
         public void exercicio7() {   //ok
