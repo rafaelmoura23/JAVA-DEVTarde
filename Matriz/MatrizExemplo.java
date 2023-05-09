@@ -52,17 +52,51 @@ public class MatrizExemplo {
         for(int i = 0; i < matriz.length; i++ ){ // 1ª dimensão
             System.out.print("| ");
             for (int j = 0; j < matriz.length; j++) { // 2ª dimensão
-                if(matriz[i]==matriz[j]){
+                if(i==j){
                     matriz[i][j]=1;
                 }
                 System.out.print(matriz[i][j]+ " ");
             }
             System.out.println("|");
         }
+    }
+
+
+    public void exercicio2(){
+        int matriz[][]= new int[4][4];
+        for(int i = 0; i < matriz.length; i++ ){ // 1ª dimensão
+            for (int j = 0; j < matriz.length; j++) { // 2ª dimensão
+                matriz[i][j] = rd.nextInt(10); //usando random
+            }
+        }
+        for (int i = 0; i < matriz.length; i++) {
+            System.out.print("| ");
+            for (int j = 0; j < matriz[0].length; j++) {
+                System.out.print(matriz[i][j] +" ");                
+            }
+            System.out.println("|");
+        }
+        System.out.println(" ");
+        for (int i = 0; i < matriz.length; i++) {
+            System.out.print("| ");
+            for (int j = 0; j < matriz[0].length; j++) {
+                System.out.print(matriz[j][i] +" ");                
+            }
+            System.out.println("|");
+        }
+        int somaDiagonal=0;  //soma da quarta coluna
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[0].length; j++) {
+                if(i==j){
+                    somaDiagonal+= matriz[i][j];
+                }
+            }
+                }
+                System.out.println("A soma da Diagonal Principal é: " +somaDiagonal);
+            }
+        }
+      
 
 
 
-}
-
-}
 
