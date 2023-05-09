@@ -1,6 +1,15 @@
 public class App{
     public static void main(String[] arg){
-        MatrizExemplo obj1 = new MatrizExemplo();
-        obj1. exercicio2();
+        MatrizExercicios obj = new MatrizExercicios();
+        obj. exercicio1();
+
+        
 }
 }
+
+//MatrizExemplo obj1 = new MatrizExemplo();
+//obj1. exercicio2();
+
+
+//MatrizExercicios obj = new MatrizExercicios();
+//obj. exercicio1();

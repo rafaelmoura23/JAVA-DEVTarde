@@ -47,12 +47,12 @@ public class MatrizExemplo {
     }
 
 
-    public void exercicio1(){ //00, 11, 22, 33, 44, 55 if i=j
+    public void exercicio1(){ //00, 11, 22, 33, 44, 55 if i=j => diagonal principal
         int matriz[][]= new int[5][5];
         for(int i = 0; i < matriz.length; i++ ){ // 1ª dimensão
             System.out.print("| ");
             for (int j = 0; j < matriz.length; j++) { // 2ª dimensão
-                if(i==j){
+                if(i==j || i+j==4){
                     matriz[i][j]=1;
                 }
                 System.out.print(matriz[i][j]+ " ");
@@ -60,8 +60,7 @@ public class MatrizExemplo {
             System.out.println("|");
         }
     }
-
-
+    
     public void exercicio2(){
         int matriz[][]= new int[4][4];
         for(int i = 0; i < matriz.length; i++ ){ // 1ª dimensão
