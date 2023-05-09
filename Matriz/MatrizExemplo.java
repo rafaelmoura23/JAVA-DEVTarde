@@ -46,5 +46,23 @@ public class MatrizExemplo {
         System.out.println("A soma da 4ª Coluna é: " +somaColuna);
     }
 
+
+    public void exercicio1(){ //00, 11, 22, 33, 44, 55 if i=j
+        int matriz[][]= new int[5][5];
+        for(int i = 0; i < matriz.length; i++ ){ // 1ª dimensão
+            System.out.print("| ");
+            for (int j = 0; j < matriz.length; j++) { // 2ª dimensão
+                if(matriz[i]==matriz[j]){
+                    matriz[i][j]=1;
+                }
+                System.out.print(matriz[i][j]+ " ");
+            }
+            System.out.println("|");
+        }
+
+
+
+}
+
 }
 
