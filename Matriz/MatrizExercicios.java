@@ -38,6 +38,12 @@ public class MatrizExercicios {
     }
 
     public void exercicio3() {
+        int matriz[][]= new int[5][5];
+        for(int i = 0; i < matriz.length; i++ ){ // 1ª dimensão
+            for (int j = 0; j < matriz.length; j++) { // 2ª dimensão
+                matriz[i][j] = rd.nextInt(10); 
+            }
+        }
     }
 
     public void exercicio4() {

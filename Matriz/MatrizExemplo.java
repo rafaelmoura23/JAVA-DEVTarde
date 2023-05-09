@@ -60,7 +60,7 @@ public class MatrizExemplo {
             System.out.println("|");
         }
     }
-    
+
     public void exercicio2(){
         int matriz[][]= new int[4][4];
         for(int i = 0; i < matriz.length; i++ ){ // 1ª dimensão
