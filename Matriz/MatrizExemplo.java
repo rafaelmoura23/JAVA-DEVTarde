@@ -12,9 +12,16 @@ public class MatrizExemplo {
         //preencher minha matriz
         for(int i = 0; i < 10; i++ ){ // 1ª dimensão
             for (int j = 0; j < 9; j++) { // 2ª dimensão
-                System.out.println("matriz[]");
-                
+                //System.out.print("matriz["+i+"]["+j+"]=");
+                matriz[i][j] = rd.nextInt(9); //usando random
             }
+        }
+        //impressão dos elementos da matriz de forma indvidual
+        for (int i = 0; i < matriz.length; i++) { // 1ª dimensão
+            for (int j = 0; j < matriz[0].length; j++) { // 2ª dimensão
+                System.out.println("matriz["+i+"] ["+j+"]=" +matriz[i][j]);
+            }
+            
         }
     }
 }
