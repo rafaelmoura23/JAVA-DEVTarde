@@ -34,16 +34,16 @@ public class MatrizExemplo {
         for (int i = 0; i < matriz[3].length; i++) {
             somaLinha +=matriz[3][i];
         }
-        System.out.println(somaLinha); //gambiarra, soma da quarta linha
+        System.out.println("A soma da 4ª Linha é: " +somaLinha); //gambiarra, soma da quarta linha
         for (int i = 0; i < 1; i++) {
             int somaGamb = matriz[3][0] + matriz[3][1] + matriz[3][2] + matriz[3][3] + matriz[3][4]+ matriz[3][5]+ matriz[3][6] + matriz[3][7] + matriz[3][8];
-            System.out.println(somaGamb);
+            System.out.println("A soma da 4ª Linha é: " +somaGamb);
         }
         int somaColuna=0;  //soma da quarta coluna
         for (int i = 0; i < matriz.length; i++) {
                 somaColuna += matriz[i][3];
         }
-        System.out.println(somaColuna);
+        System.out.println("A soma da 4ª Coluna é: " +somaColuna);
     }
 
 }
