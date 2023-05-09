@@ -92,10 +92,32 @@ public class MatrizExemplo {
                 }
             }
                 }
-                System.out.println("A soma da Diagonal Principal é: " +somaDiagonal);
+        System.out.println("A soma da Diagonal Principal é: " +somaDiagonal);
+        int somaCima=0;
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                if(j>i){
+                    somaCima+=matriz[i][j];
+                }
+            }  
+        }
+        System.out.println("A soma da Parte de cima da Diagonal é: " +somaCima); //if j<i print parte de cima
+        int somaBaixo=0;
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                if(i>j){
+                    somaBaixo+=matriz[i][j];
+                }
+            }  
+        }
+        System.out.println("A soma da Parte de baixo da Diagonal é: " +somaBaixo); //if j>i print parte de baixo
             }
         }
-      
+
+
+            
+                
+                
 
 
 
