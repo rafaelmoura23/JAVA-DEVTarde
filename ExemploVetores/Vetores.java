@@ -190,8 +190,6 @@ public class Vetores {
         System.out.println(vetorA[13]);
         System.out.println(vetorA[14]);
 
-        int vetorB[] = vetorA;
-
         System.out.println("Os Números do Vetor B São:");
         System.out.println(vetorA[0]*vetorA[0]);
         System.out.println(vetorA[1]* vetorA[1]);
@@ -245,8 +243,6 @@ public class Vetores {
         System.out.println(vetorA[12]);
         System.out.println(vetorA[13]);
         System.out.println(vetorA[14]);
-
-        double vetorB[] = vetorA;
 
         System.out.println("Os Números do Vetor B São:");
         System.out.println(Math.sqrt(vetorA[0]));
