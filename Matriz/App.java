@@ -1,7 +1,7 @@
 public class App{
     public static void main(String[] arg){
         MatrizExercicios obj = new MatrizExercicios();
-        obj. exercicio1();
+        obj. exercicio2();
 
         
 }
