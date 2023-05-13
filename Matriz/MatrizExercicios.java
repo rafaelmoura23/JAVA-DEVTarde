@@ -6,12 +6,14 @@ public class MatrizExercicios {
     Random rd = new Random();
     
     public void exercicio1() {
-        int matriz[][]= new int[4][4];
-        for(int i = 0; i < matriz.length; i++ ){ // 1ª dimensão
-            for (int j = 0; j < matriz.length; j++) { // 2ª dimensão
-                matriz[i][j] = rd.nextInt(10); 
+        int[][] matriz = new int[4][4];
+        // Preencher a matriz com i * j
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                matriz[i][j] = i * j;
             }
-        }
+         }
+        // printando o valor
         for (int i = 0; i < matriz.length; i++) {
             System.out.print("| ");
             for (int j = 0; j < matriz[0].length; j++) {
