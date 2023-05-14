@@ -147,9 +147,27 @@ public class MatrizExercicios {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 for (int k = 0; k < 3; k++) {
-                    C[i][j] = A[i][j] * B[i][j];
+                    C[i][j] = A[i][j] * B[j][i];
                 }
             }
+        }
+
+        //printar a matriz  A
+        for (int i = 0; i < A.length; i++) {
+            System.out.print("| ");
+            for (int j = 0; j < A[0].length; j++) {
+                System.out.print(A[i][j] +" ");                
+            }
+            System.out.println("|");
+        }
+        System.out.println("");
+        //printar a matriz B
+        for (int i = 0; i < B.length; i++) {
+            System.out.print("| ");
+            for (int j = 0; j < B[0].length; j++) {
+                System.out.print(B[i][j] +" ");                
+            }
+            System.out.println("|");
         }
 
         // Printar a matriz  C
