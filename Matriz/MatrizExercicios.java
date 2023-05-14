@@ -133,6 +133,8 @@ public class MatrizExercicios {
 
             System.out.print("Média dos trabalhos: ");
             matriz[i][2] = sc.nextInt();
+
+            matriz[i][3] = matriz[i][1] + matriz[i][2];
         }
 
     }
