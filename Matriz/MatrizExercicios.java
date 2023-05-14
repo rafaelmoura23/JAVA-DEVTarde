@@ -95,14 +95,30 @@ public class MatrizExercicios {
         }
     }
 
-
-
-
-
-
     public void exercicio4() {
-    }
+        int matriz[][]= new int[10][10];
 
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+
+                if (i<j){
+                    matriz[i][j] = (2 * i) + (7 * j) - 2;
+                } else if(i==j){
+                    matriz[i][j] = (3 * (i * i)) - 1;
+                } else{
+                    matriz[i][j] = (4 * (i * i * i)) - (5 * (j * j)) + 1;
+                }
+            }
+        }
+        //printar a matriz 
+        for (int i = 0; i < matriz.length; i++) {
+            System.out.print("| ");
+            for (int j = 0; j < matriz[0].length; j++) {
+                System.out.print(matriz[i][j] +" ");                
+            }
+            System.out.println("|");
+        }
+    }
     public void exercicio5() {
     }
 
