@@ -120,7 +120,51 @@ public class MatrizExercicios {
         }
     }
     public void exercicio5() {
+        int matriz[][]= new int[5][4]; //matriz de 5 linhas e 4 colunas
+
+        for (int i = 0; i < matriz.length; i++) {
+            System.out.println("Aluno " + (i+1));
+
+            System.out.print("Número de matrícula: ");
+            matriz[i][0] = sc.nextInt();
+
+            System.out.print("Média das provas: ");
+            matriz[i][1] = sc.nextInt();
+
+            System.out.print("Média dos trabalhos: ");
+            matriz[i][2] = sc.nextInt();
+        }
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public void exercicio6() {
         int A[][]= new int[3][3];
@@ -151,7 +195,6 @@ public class MatrizExercicios {
                 }
             }
         }
-
         //printar a matriz  A
         for (int i = 0; i < A.length; i++) {
             System.out.print("| ");
