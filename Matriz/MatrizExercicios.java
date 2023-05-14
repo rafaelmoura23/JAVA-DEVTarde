@@ -43,14 +43,13 @@ public class MatrizExercicios {
         int maiorValor = matriz[0][0];
         int linha = 0;
         int coluna = 0;
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
                 if (matriz[i][j] > maiorValor) {
                     maiorValor = matriz[i][j];
                     linha = i;
                     coluna = j;
                 }
-                
             }
         }
          System.out.println("O maior valor encontrado é " + maiorValor + " e está na linha " + (linha+1) + " e na coluna " + (coluna+1) + ".");
