@@ -134,8 +134,30 @@ public class MatrizExercicios {
             System.out.print("Média dos trabalhos: ");
             matriz[i][2] = sc.nextInt();
 
-            matriz[i][3] = matriz[i][1] + matriz[i][2];
+            matriz[i][3] = matriz[i][1] + matriz[i][2]; // nota final - 4ª coluna
         }
+
+        int maiorNota = matriz[0][3];
+        int numeroMatricula = matriz[0][0];
+
+        for (int i = 1; i < matriz.length; i++) {
+            if (matriz[i][3] > maiorNota) {
+                maiorNota = matriz[i][3];    // assume o maior valor
+                numeroMatricula = matriz[i][0]; // assume o numero de matricula do maior valor
+            }
+        }
+        // printar a matrícula do aluno com maior nota
+        System.out.println("Matrícula do aluno com maior nota " + numeroMatricula);
+
+        int somaNotas = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            somaNotas += matriz[i][3];
+        }
+
+        double mediaNotas = (double) somaNotas / matriz.length;
+
+        // imprime a média aritmética das notas finais
+        System.out.println("Média aritmética das notas finais: " + mediaNotas);
 
     }
 
