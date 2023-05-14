@@ -134,7 +134,7 @@ public class MatrizExercicios {
             System.out.print("Média dos trabalhos: ");
             matriz[i][2] = sc.nextInt();
 
-            matriz[i][3] = matriz[i][1] + matriz[i][2]; // nota final - 4ª coluna
+            matriz[i][3] = matriz[i][1] + matriz[i][2]; // 'nota final' - 4ª coluna
         }
 
         int maiorNota = matriz[0][3];
@@ -147,19 +147,27 @@ public class MatrizExercicios {
             }
         }
         // printar a matrícula do aluno com maior nota
-        System.out.println("Matrícula do aluno com maior nota " + numeroMatricula);
+        System.out.println("Matrícula do aluno com maior nota: " + numeroMatricula);
 
+        //  nota final 1 + nota final 2 + nota final 3 + nota final 4 + nota final 5 / 5
         int somaNotas = 0;
         for (int i = 0; i < matriz.length; i++) {
             somaNotas += matriz[i][3];
         }
+        double mediaNotas = somaNotas / matriz.length;
 
-        double mediaNotas = (double) somaNotas / matriz.length;
-
-        // imprime a média aritmética das notas finais
+        // printar a média aritmética das notas finais 
         System.out.println("Média aritmética das notas finais: " + mediaNotas);
 
+        System.out.println(""); // printando a matriz completa
+        for (int i = 0; i < matriz.length; i++) {
+            System.out.print("| ");
+            for (int j = 0; j < matriz[0].length; j++) {
+                System.out.print(matriz[i][j] +" ");                
+            }
+            System.out.println("|");
     }
+}
 
 
 
