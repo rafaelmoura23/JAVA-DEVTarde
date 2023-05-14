@@ -86,11 +86,8 @@ public class MatrizExercicios {
                     break;
                 }
             }
-            if (encontrado) {
-                break;
-            }
         }
-        // Imprime a localização do valor ou mensagem de "não encontrado"
+        // printar as mensagens
         if (encontrado) {
             System.out.print("O valor " +valorX+  " foi encontrado na linha " +linha+  " e na coluna " +coluna);
         } else {
