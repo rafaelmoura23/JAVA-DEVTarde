@@ -123,6 +123,45 @@ public class MatrizExercicios {
     }
 
     public void exercicio6() {
+        int A[][]= new int[3][3];
+        int B[][]= new int[3][3];
+        int C[][]= new int[3][3];
+
+        // matriz A
+        System.out.println("Digite os valores da matriz A:");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.printf("A[%d][%d] = ", i, j);
+                A[i][j] = sc.nextInt();
+            }
+        }
+        // matriz B
+        System.out.println("Digite os valores da matriz B:");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.printf("B[%d][%d] = ", i, j);
+                B[i][j] = sc.nextInt();
+            }
+        }
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                for (int k = 0; k < 3; k++) {
+                    C[i][j] += A[i][k] * B[k][j];
+                }
+            }
+        }
+
+        // Imprimindo a matriz  C
+        System.out.println("A * B = C:");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.printf("%d ", C[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+
     }
     
-}
