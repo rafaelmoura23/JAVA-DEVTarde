@@ -11,7 +11,6 @@ public class RegistraAluno {
     // atributo da classe
     private static int contadorEstudante;
 
-
     // metodos(ações)
     // criação de metodos do tipo get (acesso) 
     // retorna o nome do estudante
