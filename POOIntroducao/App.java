@@ -8,7 +8,6 @@ public class App {
         RegistraAluno aluno3 = new RegistraAluno(); // criei um objeto
 
         // setando os atibutos (SET)
-
         aluno1.setNome("Ana Carla Pereira");
         aluno1.setEndereco("Rua Carlos Gomes");
         aluno1.setIdade(19);
@@ -36,10 +35,14 @@ public class App {
         System.out.println("Idade: " + aluno1.getIdade());
         System.out.println("Media: " + aluno1.getMedia());
 
+        System.out.println(" ");
+
         System.out.println("Nome: " + aluno2.getNome());
         System.out.println("Endereço: " + aluno2.getEndereco());
         System.out.println("Idade: " + aluno2.getIdade());
         System.out.println("Media: " + aluno2.getMedia());
+
+        System.out.println(" ");
 
         System.out.println("Nome: " + aluno3.getNome());
         System.out.println("Endereço: " + aluno3.getEndereco());

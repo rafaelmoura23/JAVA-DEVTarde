@@ -44,36 +44,35 @@ public class RegistraAluno {
     }
 
 
-
     // metodos de definição (set)
 
     // define ou altera o nome do estudante
-    public void setNome(String temp) {
-        nome = temp;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     // define ou altera o endereço do estudante
-    public void setEndereco(String temp) {
-        endereco = temp;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     // define ou altera o endereço do estudante
-    public void setIdade(int temp) {
-        idade = temp;
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 
     // define ou altera o endereço do estudante
-    public void setNotaMatematica(double temp) {
-        notaMatematica = temp;
+    public void setNotaMatematica(double notaMatematica) {
+        this.notaMatematica = notaMatematica;
     }
 
     // define ou altera o endereço do estudante
-    public void setNotaPortugues(double temp) {
-        notaPortugues = temp;
+    public void setNotaPortugues(double notaPortugues) {
+        this.notaPortugues = notaPortugues;
     }
 
     // define ou altera o endereço do estudante
-    public void setNotaCiencias(double temp) {
-        notaCiencias = temp;
+    public void setNotaCiencias(double notaCiencias) {
+        this.notaCiencias = notaCiencias;
     }
 }
