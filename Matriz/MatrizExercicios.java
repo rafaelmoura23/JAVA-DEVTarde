@@ -170,34 +170,6 @@ public class MatrizExercicios {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public void exercicio6() {
         int A[][]= new int[3][3];
         int B[][]= new int[3][3];
@@ -246,15 +218,15 @@ public class MatrizExercicios {
         }
 
         // Printar a matriz  C
-        System.out.println("A * B = C:");
+        System.out.println("C = A * B:");
         for (int i = 0; i < 3; i++) {
+            System.out.print("|");
             for (int j = 0; j < 3; j++) {
-                System.out.printf("%d ", C[i][j]);
+                System.out.print(C[i][j] +" ");
             }
-            System.out.println();
+            System.out.println("|");
+            
         }
     }
-
-
     }
     
