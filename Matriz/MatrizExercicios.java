@@ -75,12 +75,12 @@ public class MatrizExercicios {
         System.out.print("Informe um valor: (10 a 99)"); // valor X a ser encontrado na matriz
         valorX = sc.nextInt();
 
-        boolean encontrado = false;
+        boolean encontrar = false;
         int linha = 0, coluna = 0;
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
                 if (matriz[i][j] == valorX) {
-                    encontrado = true;
+                    encontrar = true;
                     linha = i;
                     coluna = j;
                     break;
@@ -88,7 +88,7 @@ public class MatrizExercicios {
             }
         }
         // printar as mensagens
-        if (encontrado) {
+        if (encontrar) {
             System.out.print("O valor " +valorX+  " foi encontrado na linha " +linha+  " e na coluna " +coluna);
         } else {
             System.out.print("O valor " +valorX+  " não foi encontrado na matriz.");
@@ -225,7 +225,6 @@ public class MatrizExercicios {
                 System.out.print(C[i][j] +" ");
             }
             System.out.println("|");
-            
         }
     }
     }
