@@ -15,4 +15,5 @@ pedir novos palpites até que o usuário acerte
 printar Parabéns, Acertou
 mostrar em quantas vezes o usuario acertou
 
-3.
+3. sortear o numero de linhas e colunas usando random
+montar a matriz com o tamanho das linhas e colunas sorteadas

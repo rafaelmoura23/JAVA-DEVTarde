@@ -83,6 +83,21 @@ public class Exercicios {
 
         int[][] matriz = new int[sorteioLinha][sorteioColuna]; //matriz linhas x colunas com números sorteado
 
+        for (int i = 0; i < sorteioLinha; i++) {  //linhas 
+            for (int j = 0; j < sorteioColuna; j++) {  //colunas
+                matriz[i][j] = rd.nextInt(1, 100); // usando random
+            }
+        }
+
+        System.out.println("Matriz Inteira Random: "); //printando a matriz random
+        for (int i = 0; i < matriz.length; i++) {
+            System.out.print("| ");
+            for (int j = 0; j < matriz[0].length; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println("|");
+        }
+
         
 
 
