@@ -10,14 +10,14 @@ public class Exercicios {
     public void exercicio1() {
 
         System.out.print("Número de Linhas: "); //digitando as linhas
-        int linhas = sc.nextInt();
+        int linha = sc.nextInt();
         System.out.print("Número de colunas: "); //digitando as colunas
-        int colunas = sc.nextInt();
+        int coluna = sc.nextInt();
 
-        int[][] matriz = new int[linhas][colunas]; //matriz linhas x colunas
+        int[][] matriz = new int[linha][coluna]; //matriz linhas x colunas
 
-        for (int i = 0; i < linhas; i++) {  //linhas 
-            for (int j = 0; j < colunas; j++) {  //colunas
+        for (int i = 0; i < linha; i++) {  //linhas 
+            for (int j = 0; j < coluna; j++) {  //colunas
                 matriz[i][j] = rd.nextInt(0, 9); // usando random
             }
         }
@@ -31,8 +31,8 @@ public class Exercicios {
             System.out.println("|");
         }
 
-        for (int i = 0; i < linhas; i++) {   //condicionando a matriz 
-            for (int j = 0; j < colunas; j++) {
+        for (int i = 0; i < linha; i++) {   //condicionando a matriz 
+            for (int j = 0; j < coluna; j++) {
                 if (i>j) {                
                     matriz[i][j] = 1;          //i>j = 1
                 } else if (i==j) {          
@@ -56,9 +56,9 @@ public class Exercicios {
     public void exercicio2() {
 
         int numeroSorteado = rd.nextInt(0,10); //sortear um número de 0 a 1000
-        int contTentativas=0;
         int palpite;
         boolean tenteNovamente = true;
+        int contTentativas=0;  //contando as tentativas
 
         while(tenteNovamente){
         System.out.print("Faça seu palpite: ");
@@ -69,12 +69,15 @@ public class Exercicios {
         } else if (palpite<numeroSorteado){
             System.out.println("Palpite MENOR do que o Número Sorteado!");
         } else{
-            System.out.println("Parabéns!!! " +"O número Sorteado foi " +numeroSorteado);
-            System.out.println("Você Acertou em " +(contTentativas+1)+ " Tentativas!");
+            System.out.println("Parabéns!!! Você Acertouu!!! " +"| O número Sorteado foi " +numeroSorteado + " | Você Acertou em " +(contTentativas+1)+ " Tentativas!");
             tenteNovamente=false;
         }
         contTentativas++;
     }
+    }
+
+    public void exercicio3() {
+
         
     }
 }
