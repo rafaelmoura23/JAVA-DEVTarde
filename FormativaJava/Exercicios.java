@@ -55,7 +55,7 @@ public class Exercicios {
 
     public void exercicio2() {
 
-        int numeroSorteado = rd.nextInt(0,10); //sortear um número de 0 a 1000
+        int numeroSorteado = rd.nextInt(0,1000); //sortear um número de 0 a 1000
         int palpite;
         boolean tenteNovamente = true;
         int contTentativas=0;  //contando as tentativas
@@ -77,6 +77,15 @@ public class Exercicios {
     }
 
     public void exercicio3() {
+
+        int sorteioLinha = rd.nextInt(100,1000); //sortear um número de 100 a 1000
+        int sorteioColuna = rd.nextInt(100,1000); //sortear um número de 100 a 1000
+
+        int[][] matriz = new int[sorteioLinha][sorteioColuna]; //matriz linhas x colunas com números sorteado
+
+        
+
+
 
         
     }
