@@ -1,0 +1,18 @@
+1. pedir o número de linhas ao usuário
+pedir o número de colunas ao usuário
+random com números e linhas definidas pelo usuário
+imprimir a matriz
+substituir a matriz:
+se i>j valor = 1
+se i==j valor = 0
+se j>i valor = 2
+imprimir a matriz
+
+2. sortear um numero de 0 a 1000 (usando random)
+pedir um numero para o usuario
+if (palpite diferente do numero Sorteado) então mostrar se o número do palpite é maior ou menor do que o número Sorteado
+pedir novos palpites até que o usuário acerte
+printar Parabéns, Acertou
+mostrar em quantas vezes o usuario acertou
+
+3.
