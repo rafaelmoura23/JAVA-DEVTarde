@@ -86,8 +86,19 @@ public class Exercicios {
         for (int i = 0; i < sorteioVetor; i++) {
             vetor[i] = rd.nextInt(1, 100); // sorteando os valores do vetor
         }
-        for (int i = 0; i < vetor.length; i++) {   //printando apenas o vetor sorteado;
-            System.out.print(vetor[i] + " ");
+        System.out.println("Números PARES:");  
+        for (int i = 0; i < vetor.length; i++) {  
+            if (vetor[i] % 2 == 0) {     // numeros pares 
+                System.out.print(vetor[i] + " "); //printando os números pares
+            }
         }
+        System.out.println(" ");
+        System.out.println("Números ÍMPARES:");
+        for (int i = 0; i < vetor.length; i++) {  //numeros impares
+            if (vetor[i] % 2 != 0) {              //printando os números impares
+                System.out.print(vetor[i] + " ");
+            }
+        }
+
     }
 }
