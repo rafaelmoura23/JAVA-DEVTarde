@@ -64,15 +64,15 @@ public class Exercicios {
         System.out.print("Faça seu palpite: ");
         palpite = sc.nextInt();   // pedindo o palpite para o usuário
 
-        if(palpite>numeroSorteado){
+        if(palpite>numeroSorteado){          //se palpite maior do que o número sorteado
             System.out.println("Palpite MAIOR do que o Número Sorteado!");
-        } else if (palpite<numeroSorteado){
+        } else if (palpite<numeroSorteado){  //se palpite menor do que o número sorteado
             System.out.println("Palpite MENOR do que o Número Sorteado!");
-        } else{
+        } else{                              //se palpite estiver certo
             System.out.println("Parabéns!!! Você Acertouu!!! " +"| O número Sorteado foi " +numeroSorteado + " | Você Acertou em " +(contTentativas+1)+ " Tentativas!");
-            tenteNovamente=false;
+            tenteNovamente=false;  
         }
-        contTentativas++;
+        contTentativas++; 
     }
     }
 
