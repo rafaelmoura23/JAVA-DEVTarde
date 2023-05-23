@@ -1,8 +1,9 @@
 package POOHeranca;
 
-public class Pessoas {
+public  abstract class Pessoas {
     //superclasse - fornece herança para as outras classes
     //atributos genéricos - comuns a todas as classes herdeiras
+    //abstract - é uma classe que não pode ser instanciada como objeto
 
     //ATRIBUTOS 
     String nome;

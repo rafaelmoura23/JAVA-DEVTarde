@@ -2,16 +2,16 @@ package POOHeranca;
 
 public class App {
     public static void main(String[] args) {
-        Pessoas pessoa01 = new Pessoas(); // objeto
+        // Pessoas pessoa01 = new Pessoas(); // objeto
         Alunos aluno01 = new Alunos(); // objeto
         Professores professor01 = new Professores(); // objeto
         Funcionarios funcionario01 = new Funcionarios(); // objeto
 
-        // setando os atributos - PESSOA
-        pessoa01.setNome("Rafael de Sousa Moura");
-        pessoa01.setEndereco("Rua das Flores, 192");
-        pessoa01.setIdade(19);
-        pessoa01.setCpf("123.456.789-1");
+        //setando os atributos - PESSOA
+        //pessoa01.setNome("Rafael de Sousa Moura");
+        //pessoa01.setEndereco("Rua das Flores, 192");
+        //pessoa01.setIdade(19);
+        //pessoa01.setCpf("123.456.789-1");
 
 
         //setando os atributos - ALUNO
@@ -43,10 +43,10 @@ public class App {
         
 
         //mostrando os atributos
-        System.out.println("Nome: " + pessoa01.getNome());
-        System.out.println("Endereço: " + pessoa01.getEndereco()); 
-        System.out.println("Idade: " + pessoa01.getIdade());
-        System.out.println("CPF: " + pessoa01.getCpf());
+        //System.out.println("Nome: " + pessoa01.getNome());
+        //System.out.println("Endereço: " + pessoa01.getEndereco()); 
+        //System.out.println("Idade: " + pessoa01.getIdade());
+        //System.out.println("CPF: " + pessoa01.getCpf());
 
         System.out.println(" ");
 
