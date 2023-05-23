@@ -90,8 +90,8 @@ public class Exercicios {
         for (int i = 0; i < vetor.length; i++) {  
             if (vetor[i] % 2 == 0) {     // numeros pares 
                 System.out.print(vetor[i] + " "); //printando os números pares
-            }
         }
+    }
         System.out.println(" ");
         System.out.println("Números ÍMPARES:");
         for (int i = 0; i < vetor.length; i++) {  //numeros impares
@@ -99,6 +99,26 @@ public class Exercicios {
                 System.out.print(vetor[i] + " ");
             }
         }
+
+        System.out.println(" ");
+
+
+        int contNparPimpar= 0;
+        for (int i = 1; i < vetor.length; i+=2) {
+            if (vetor[i] % 2 == 0) {
+                contNparPimpar++;
+            }
+        }
+        System.out.println(" ");
+        System.out.println("Números PARES em posições IMPARES: " + contNparPimpar);
+
+        int contNimparPpar= 0;
+        for (int i = 0; i < vetor.length; i+=2) {
+            if (vetor[i] % 2 != 0) {
+                contNimparPpar++;
+        }
+    }
+    System.out.println("Números IMPARES em posições PARES: "+contNimparPpar);
 
     }
 }
