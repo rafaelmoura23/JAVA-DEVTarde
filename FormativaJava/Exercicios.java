@@ -55,7 +55,7 @@ public class Exercicios {
 
     public void exercicio2() {
 
-        int numeroSorteado = rd.nextInt(0,2); //sortear um número de 0 a 1000
+        int numeroSorteado = rd.nextInt(0,10); //sortear um número de 0 a 1000
         int contTentativas=0;
         int palpite;
         boolean tenteNovamente = true;
@@ -69,7 +69,7 @@ public class Exercicios {
         } else if (palpite<numeroSorteado){
             System.out.println("Palpite MENOR do que o Número Sorteado!");
         } else{
-            System.out.println("Parabéns!!! " + palpite+ " = " +numeroSorteado);
+            System.out.println("Parabéns!!! " +"O número Sorteado foi " +numeroSorteado);
             System.out.println("Você Acertou em " +(contTentativas+1)+ " Tentativas!");
             tenteNovamente=false;
         }
