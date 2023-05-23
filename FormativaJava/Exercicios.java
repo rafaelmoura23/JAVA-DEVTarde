@@ -95,7 +95,7 @@ public class Exercicios {
         System.out.println(" ");
         System.out.println("Números ÍMPARES:");
         for (int i = 0; i < vetor.length; i++) {  //numeros impares
-            if (vetor[i] % 2 != 0) {              //printando os números impares
+            if (vetor[i] % 2 == 1) {              //printando os números impares
                 System.out.print(vetor[i] + " ");
             }
         }
