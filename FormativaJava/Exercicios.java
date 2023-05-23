@@ -102,9 +102,8 @@ public class Exercicios {
 
         System.out.println(" ");
 
-
         int contNparPimpar= 0;
-        for (int i = 1; i < vetor.length; i+=2) {
+        for (int i = 1; i < vetor.length; i+=2) {   //Numero Par na posição Impar
             if (vetor[i] % 2 == 0) {
                 contNparPimpar++;
             }
@@ -113,7 +112,7 @@ public class Exercicios {
         System.out.println("Números PARES em posições IMPARES: " + contNparPimpar);
 
         int contNimparPpar= 0;
-        for (int i = 0; i < vetor.length; i+=2) {
+        for (int i = 0; i < vetor.length; i+=2) {   //numero Impar na posição Par
             if (vetor[i] % 2 != 0) {
                 contNimparPpar++;
         }
