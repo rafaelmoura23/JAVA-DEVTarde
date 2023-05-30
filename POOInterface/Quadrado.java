@@ -2,22 +2,33 @@ package POOInterface;
 
 public class Quadrado implements FigurasGeometricas{
 
-    // assinou um contrato com figuras geometricas
+    // assinou um contrato com figurasGeometricas
     //obrigatoriamente declarar os metodos da classe figuras geometricas
 
+    //declarar atributos da classe Quadrado
+    int lado;
+
+    //construtor com parâmetros
+    public Quadrado(int lado) {
+        this.lado = lado;
+    }
+    
+    //metodos importados de figurasGeometricas
     @Override
     public double getArea() {
-        return 0;
+        int area = lado*lado;
+        return area;
     }
 
     @Override
     public String getNomeFigura() {
-        return null;
+        return "Quadrado";
     }
 
     @Override
     public double getPerimetro() {
-        return 0;
+        int perimetro = 4*lado;
+        return perimetro;
     } 
     
 }
