@@ -16,6 +16,11 @@ public class Trapezio implements FigurasGeometricas {
         this.lado1 = lado1;
         this.lado2 = lado2;
     }
+    
+    //construtor vazio
+    public Trapezio(){
+
+    }
 
     //metodos @override
     @Override
