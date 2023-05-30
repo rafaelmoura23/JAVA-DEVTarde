@@ -41,4 +41,7 @@ public class Alunos extends Pessoas {
     public void setTurma(String turma) {
         this.turma = turma;
     }
+    public void setRg(){           //metodo declarado na superclasse porém abstract, ou seja, tem que declarar novamente na classe; 
+        String rg = "SP"+"numero";
+    }
 }

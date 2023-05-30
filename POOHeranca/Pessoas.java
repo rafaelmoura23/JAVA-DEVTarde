@@ -10,6 +10,7 @@ public  abstract class Pessoas {
     String endereco;
     int idade;
     String cpf;
+    String rg;   //superclasse
 
     //MÉTODOS
     public String getNome() {

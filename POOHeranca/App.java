@@ -8,7 +8,7 @@ public class App {
         Funcionarios funcionario01 = new Funcionarios(); // objeto
 
         //setando os atributos - PESSOA
-        //pessoa01.setNome("Rafael de Sousa Moura");
+        //pessoa01.setNome("Rafael de Sousa Moura");  não consigo instanciar um objeto da classe pessoa 
         //pessoa01.setEndereco("Rua das Flores, 192");
         //pessoa01.setIdade(19);
         //pessoa01.setCpf("123.456.789-1");
