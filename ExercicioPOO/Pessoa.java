@@ -7,6 +7,7 @@ public class Pessoa {
      private int mes;
      private int ano;
      private double altura;
+     private int idade;
 
     // metodos de definição (set)
     // define ou altera o nome do estudante
@@ -40,7 +41,11 @@ public class Pessoa {
     public void setAltura(double altura) {
         this.altura = altura;
     }
+    public int getIdade() {
+        return idade-ano;
+    }
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
 
-     
-    
 }
