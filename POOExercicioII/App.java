@@ -1,6 +1,5 @@
 package POOExercicioII;
 
-import javax.swing.JOptionPane;
 
 public class App {
     public static void main(String[] args) {
@@ -10,10 +9,12 @@ public class App {
         for (int i = 0; i < obj.length; i++) {
             obj[i] = new Agenda(); //construindo o objeto 
             //preencher o objeto
-            obj[i].setNome(JOptionPane.showInputDialog("Nome: "));
-            obj[i].setIdade(JOptionPane.showInputDialog("Idade: "));
-            obj[i].setAltura(JOptionPane.showInputDialog("Altura: "));
-            
+            obj[i].setNome("Pessoa"+i);
+            obj[i].setIdade("Idade"+i);
+            obj[i].setAltura("Altura"+i);
         }
+        System.out.println();
+
+
 }
 }
