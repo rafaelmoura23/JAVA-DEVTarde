@@ -9,7 +9,7 @@ public class App {
         //criar um objeto
         //setar os objetos
 
-        System.out.println("Porta do Elevador Aberta");
+        System.out.println("Inicío");
 
         System.out.print("Digite a Capacidade do Elevador");
         int capacidadePessoas = scanner.nextInt();
@@ -20,16 +20,25 @@ public class App {
         pessoas1.Inicializar(capacidadePessoas, totalAndares); 
 
 
-        System.out.print("Escolha uma opção: ");
+        System.out.print("Porta do Elevador Aberta");
         boolean Continue = true;
 
         while(Continue){
-            System.out.print("1-Entrar, 2-Subir, 3-Descer, 4-Sair, 5-Finish")
+            System.out.print("1-Entrar, 2-Subir, 3-Descer, 4-Sair, 5-Finish");
+            System.out.print("Escolha uma opção: ");
+            int opcao = scanner.nextInt();
 
+            if(opcao==1){
+                pessoas1.entrar();
+            } else if(opcao==2){
+                pessoas1.subir();
+            } else if(opcao==3){
+                pessoas1.descer();
+            } else if(opcao==4){
+                pessoas1.sair();
+            } else if(opcao==5){
+                Continue = false;
+            }
         }
-
-
-
-
   }
 }
