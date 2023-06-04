@@ -37,7 +37,7 @@ public class Elevador {
 
     public void subir(){
         if(andarAtual==totalAndares){
-            System.out.println("O elevador está no ÚLTIMO andar, desça ou fique aí");
+            System.out.println("O elevador está no ÚLTIMO andar, desça ou fique aí"); //se andar atual for igual ao total de andares então está no ultimo andar
         } else{
             andarAtual++;
             System.out.println("você SUBIU para o " +andarAtual+"º andar");
@@ -46,7 +46,7 @@ public class Elevador {
 
     public void descer() {
         if(andarAtual<=0){
-            System.out.println("O elevador já está no TÉRREO");
+            System.out.println("O elevador já está no TÉRREO"); //se o andar atual for igual a zero entçao o elevador ja esta no terreo
         } else{
             andarAtual--;
             System.out.println("Você DESCEU para o "+ andarAtual+"º andar" );
