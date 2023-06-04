@@ -8,7 +8,7 @@ public class Elevador {
     private int pessoasNoElevador;
 
     //construtor Inicializar
-    public Elevador(int andarAtual, int totalAndares, int capacidadePessoas, int pessoasNoElevador) {
+    public void Inicializar(int capacidadePessoas, int totalAndares) {
         this.andarAtual = 0;
         this.totalAndares = totalAndares;
         this.capacidadePessoas = capacidadePessoas;

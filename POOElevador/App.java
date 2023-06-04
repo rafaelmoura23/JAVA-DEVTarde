@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Elevador pessoas1 = new Elevador();
         //criar um objeto
-        Elevador pessoas1 = new Elevador(0, 10, 5, 0);
         //setar os objetos
 
         System.out.println("Porta do Elevador Aberta");
@@ -16,6 +16,10 @@ public class App {
 
         System.out.print("Informe o número de andares: ");
         int totalAndares = scanner.nextInt();
+
+        pessoas1.Inicializar(capacidadePessoas, totalAndares); 
+
+        
 
 
   }
