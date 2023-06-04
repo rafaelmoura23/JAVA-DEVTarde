@@ -15,44 +15,14 @@ public class Elevador {
         this.pessoasNoElevador = 0;
     }
 
-    //sets and gests (métodos)
-
-    public int getAndarAtual() {
-        return andarAtual;
-    }
-    public void setAndarAtual(int andarAtual) {
-        this.andarAtual = 0;
-    }
-
-    public int getTotalAndares() {
-        return totalAndares;
-    }
-    public void setTotalAndares(int totalAndares) {
-        this.totalAndares = totalAndares;
-    }
-
-
-    public int getCapacidadePessoas() {
-        return capacidadePessoas;
-    }
-    public void setCapacidadePessoas(int capacidadePessoas) {
-        this.capacidadePessoas = capacidadePessoas;
-    }
-
-
-    public int getPessoasNoElevador() {
-        return pessoasNoElevador;
-    }
-    public void setPessoasNoElevador(int pessoasNoElevador) {
-        this.pessoasNoElevador = 0;
-    }
-
     //outros métodos que o elevador também necessita  
     public void entrar() {
         if(pessoasNoElevador>capacidadePessoas){
             System.out.println("O elevador está lotado");
         } else{
             pessoasNoElevador++;
+            System.out.println("Uma pessoa entrou no elevador");
+
         } 
     }
 
