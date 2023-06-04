@@ -5,13 +5,9 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Elevador pessoas1 = new Elevador();
-        //criar um objeto
-        //setar os objetos
+        Elevador pessoas1 = new Elevador(); //criar um objeto
 
-        System.out.println("Inicío");
-
-        System.out.print("Digite a Capacidade do Elevador");
+        System.out.print("Digite a Capacidade de Pessoas no Elevador: ");
         int capacidadePessoas = scanner.nextInt();
 
         System.out.print("Informe o número de andares: ");
@@ -20,13 +16,13 @@ public class App {
         pessoas1.Inicializar(capacidadePessoas, totalAndares); 
 
 
-        System.out.print("Porta do Elevador Aberta");
+        System.out.println("Porta do Elevador Aberta");
         boolean Continue = true;
 
         while(Continue){
-            System.out.print("1-Entrar, 2-Subir, 3-Descer, 4-Sair, 5-Finish");
-            System.out.print("Escolha uma opção: ");
+            System.out.println("Escolha uma opção: [1]-Entrar, [2]-Subir, [3]-Descer, [4]-Sair, [5]-Finish");
             int opcao = scanner.nextInt();
+            
 
             if(opcao==1){
                 pessoas1.entrar();
@@ -38,6 +34,8 @@ public class App {
                 pessoas1.sair();
             } else if(opcao==5){
                 Continue = false;
+            } else{
+                System.out.println("Escolha uma opção de 1 a 5.");
             }
         }
   }
