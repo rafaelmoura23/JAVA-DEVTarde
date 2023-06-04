@@ -13,9 +13,9 @@ public class Elevador {
         return andarAtual;
     }
     public void setAndarAtual(int andarAtual) {
-        this.andarAtual = andarAtual;
+        this.andarAtual = 0;
     }
-    
+
 
     public int getTotalAndares() {
         return totalAndares;
@@ -37,11 +37,65 @@ public class Elevador {
         return pessoasNoElevador;
     }
     public void setPessoasNoElevador(int pessoasNoElevador) {
-        this.pessoasNoElevador = pessoasNoElevador;
+        this.pessoasNoElevador = 0;
     }
-    
 
-  } 
+    //outros métodos que o elevador também necessita 
+
+    
+    public void inicializar() {
+
+    }
+
+    public void entrar() {
+        if(pessoasNoElevador>capacidadePessoas){
+            System.out.println("O elevador está lotado");
+        } else{
+            pessoasNoElevador++;
+        } 
+    }
+
+    public void sair() {
+        if(pessoasNoElevador<=0){
+            System.out.println("Não há ninguém no elevador");
+        } else{
+            pessoasNoElevador--;
+            System.out.println("Uma pessoa saiu");
+        }
+    }
+
+    public void subir(){
+        if(andarAtual==totalAndares){
+            System.out.println("O elevador está no último andar, desça ou fique aí");
+        } else{
+            andarAtual++;
+            System.out.println("você subiu para o andar " +andarAtual);
+        }
+    }
+
+    public void descer() {
+        if(andarAtual<=0){
+            System.out.println("O elevador já está no térreo");
+        } else{
+            andarAtual--;
+            System.out.println("Você desceu para o andar "+ andarAtual);
+        }
+        
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
  
 
 
