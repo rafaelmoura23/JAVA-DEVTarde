@@ -19,7 +19,16 @@ public class App {
 
         pessoas1.Inicializar(capacidadePessoas, totalAndares); 
 
-        
+
+        System.out.print("Escolha uma opção: ");
+        boolean Continue = true;
+
+        while(Continue){
+            System.out.print("1-Entrar, 2-Subir, 3-Descer, 4-Sair, 5-Finish")
+
+        }
+
+
 
 
   }
