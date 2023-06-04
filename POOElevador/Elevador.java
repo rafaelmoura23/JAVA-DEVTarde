@@ -7,6 +7,14 @@ public class Elevador {
     private int capacidadePessoas;
     private int pessoasNoElevador;
 
+    //construtor Inicializar
+    public Elevador(int andarAtual, int totalAndares, int capacidadePessoas, int pessoasNoElevador) {
+        this.andarAtual = 0;
+        this.totalAndares = totalAndares;
+        this.capacidadePessoas = capacidadePessoas;
+        this.pessoasNoElevador = 0;
+    }
+
     //sets and gests (métodos)
 
     public int getAndarAtual() {
@@ -15,7 +23,6 @@ public class Elevador {
     public void setAndarAtual(int andarAtual) {
         this.andarAtual = 0;
     }
-
 
     public int getTotalAndares() {
         return totalAndares;
@@ -40,13 +47,7 @@ public class Elevador {
         this.pessoasNoElevador = 0;
     }
 
-    //outros métodos que o elevador também necessita 
-
-    
-    public void inicializar() {
-
-    }
-
+    //outros métodos que o elevador também necessita  
     public void entrar() {
         if(pessoasNoElevador>capacidadePessoas){
             System.out.println("O elevador está lotado");
