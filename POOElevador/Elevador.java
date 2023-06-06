@@ -58,17 +58,24 @@ public class Elevador {
     }
 
     //subir
-    public void subir(int nAndares) {
+    public int subir(int nAndares) {
         if(andarAtual+nAndares<=totalAndares){
         andarAtual+=nAndares;
         }else{
-            System.out.println("já está no andar mais alto");
+            System.out.println("Digite um número válido para subir");
     }
+    return andarAtual;
     }
 
-
-
-
+    //descer 
+    public int descer(int nAndares) {
+        if(andarAtual-nAndares>=0){
+        andarAtual-=nAndares;
+        }else{
+            System.out.println("Digite um número válido para descer");
+    }
+    return andarAtual;
+}
     }
 
 
