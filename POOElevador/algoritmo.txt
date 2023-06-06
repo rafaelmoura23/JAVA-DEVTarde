@@ -71,7 +71,6 @@ Scanner scanner = new Scanner(System.in);
         } else{
             pessoasNoElevador++;
             System.out.println("Uma pessoa ENTROU no elevador");
-
         } 
     }
 
