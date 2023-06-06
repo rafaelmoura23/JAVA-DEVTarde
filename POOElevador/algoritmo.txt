@@ -1,0 +1,103 @@
+Scanner scanner = new Scanner(System.in);
+
+        Elevador pessoas1 = new Elevador(); //criar um objeto
+
+        // pedir a capacidade para o usuario e guardar na variavel capacidade
+        System.out.print("Digite a Capacidade de Pessoas no Elevador: "); 
+        int capacidadePessoas = scanner.nextInt();
+
+        // pedir o numero de andares para o usuario e guardar na andares
+        System.out.print("Informe o número de andares: ");
+        int totalAndares = scanner.nextInt();
+
+        // atribuindo os valores digitados pelo usuario para o construtor
+        pessoas1.Inicializar(capacidadePessoas, totalAndares); 
+
+        // iniciar o metodo para ficar rodando o programa até que o usuario saia
+        System.out.println("Porta do Elevador Aberta");
+        boolean Continue = true; //quando boolean for false então programa finaliza   [switch?]
+        while(Continue){
+            System.out.println("Escolha uma opção: [1]-Entrar, [2]-Subir, [3]-Descer, [4]-Sair, [5]-Finish");
+            int opcao = scanner.nextInt();
+        
+            if(opcao==1){
+                pessoas1.entrar();
+            } else if(opcao==2){
+                pessoas1.subir();
+            } else if(opcao==3){
+                pessoas1.descer();
+            } else if(opcao==4){
+                pessoas1.sair();
+            } else if(opcao==5){
+                Continue = false;
+            } else{
+                System.out.println("Escolha uma opção de 1 a 5."); //se o usuario digitar algum numero fora do range então...
+            }
+        }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //construtor Inicializar
+    public void Inicializar(int capacidadePessoas, int totalAndares) { //atribuir apenas a capacidade e o total de andares no App
+        this.andarAtual = 0; //definido como zero
+        this.totalAndares = totalAndares;  //pedir para o usuario definir 
+        this.capacidadePessoas = capacidadePessoas;  //pedir para o usuario definir
+        this.pessoasNoElevador = 0; //definido como zero
+    }
+
+    // métodos que o elevador também necessita  
+    public void entrar() {
+        if(pessoasNoElevador>capacidadePessoas){ //se pessoas no elevador for maior do que a capacidade então o elevador está lotado
+            System.out.println("O elevador está LOTADO"); 
+        } else{
+            pessoasNoElevador++;
+            System.out.println("Uma pessoa ENTROU no elevador");
+
+        } 
+    }
+
+    public void sair() {
+        if(pessoasNoElevador<=0){
+            System.out.println("O elevador está VAZIO"); // se pessoas no elevador = 0 então elevador está vazio
+        } else{
+            pessoasNoElevador--;
+            System.out.println("Uma pessoa SAIU do elevador");
+        }
+    }
+
+    public void subir(){
+        if(andarAtual==totalAndares){
+            System.out.println("O elevador está no ÚLTIMO andar, desça ou fique aí"); //se andar atual for igual ao total de andares então está no ultimo andar
+        } else{
+            andarAtual++;
+            System.out.println("você SUBIU para o " +andarAtual+"º andar");
+        }
+    }
+
+    public void descer() {
+        if(andarAtual<=0){
+            System.out.println("O elevador já está no TÉRREO"); //se o andar atual for igual a zero entçao o elevador ja esta no terreo
+        } else{
+            andarAtual--;
+            System.out.println("Você DESCEU para o "+ andarAtual+"º andar" );
+        }
+        

@@ -2,68 +2,74 @@ package POOElevador;
 
 public class Elevador {
     //atributos do Elevador 
-    private int andarAtual;
-    private int totalAndares;
-    private int capacidadePessoas;
-    private int pessoasNoElevador;
+    int andarAtual;
+    int totalAndares;
+    int capacidadePessoas;
+    int pessoasNoElevador;
 
-    //construtor Inicializar
-    public void Inicializar(int capacidadePessoas, int totalAndares) { //atribuir apenas a capacidade e o total de andares no App
-        this.andarAtual = 0; //definido como zero
-        this.totalAndares = totalAndares;  //pedir para o usuario definir 
-        this.capacidadePessoas = capacidadePessoas;  //pedir para o usuario definir
-        this.pessoasNoElevador = 0; //definido como zero
+    //metodos
+
+    //construtor
+    public Elevador(int totalAndares, int capacidadePessoas) {
+        this.totalAndares = totalAndares;
+        this.capacidadePessoas = capacidadePessoas;
     }
 
-    // métodos que o elevador também necessita  
-    public void entrar() {
-        if(pessoasNoElevador>capacidadePessoas){ //se pessoas no elevador for maior do que a capacidade então o elevador está lotado
-            System.out.println("O elevador está LOTADO"); 
-        } else{
-            pessoasNoElevador++;
-            System.out.println("Uma pessoa ENTROU no elevador");
-
-        } 
+    //getts and setts
+    public int getAndarAtual() {
+        return andarAtual;
     }
 
-    public void sair() {
-        if(pessoasNoElevador<=0){
-            System.out.println("O elevador está VAZIO"); // se pessoas no elevador = 0 então elevador está vazio
-        } else{
-            pessoasNoElevador--;
-            System.out.println("Uma pessoa SAIU do elevador");
-        }
+    public void setAndarAtual(int andarAtual) {
+        this.andarAtual = andarAtual;
     }
 
-    public void subir(){
-        if(andarAtual==totalAndares){
-            System.out.println("O elevador está no ÚLTIMO andar, desça ou fique aí"); //se andar atual for igual ao total de andares então está no ultimo andar
-        } else{
-            andarAtual++;
-            System.out.println("você SUBIU para o " +andarAtual+"º andar");
-        }
+    public int getPessoasNoElevador() {
+        return pessoasNoElevador;
     }
 
-    public void descer() {
-        if(andarAtual<=0){
-            System.out.println("O elevador já está no TÉRREO"); //se o andar atual for igual a zero entçao o elevador ja esta no terreo
-        } else{
-            andarAtual--;
-            System.out.println("Você DESCEU para o "+ andarAtual+"º andar" );
-        }
-        
+    public void setPessoasNoElevador(int pessoasNoElevador) {
+        this.pessoasNoElevador = pessoasNoElevador;
+    }
+
+    //metodos próprios
+    public void inicializa() {
+        andarAtual=0;
+        pessoasNoElevador=0;
+    }
+    //entra
+    public int entra() {
+        if(pessoasNoElevador<capacidadePessoas){
+        pessoasNoElevador++;
+        }else{
+            System.out.println("Elevador está CHEIO");
+    }
+    return pessoasNoElevador;
+    }
+
+    //sair
+    public int sai() {
+        if(pessoasNoElevador>0){
+        pessoasNoElevador--;
+        }else{
+            System.out.println("Elevador está VAZIO");
+    }
+    return pessoasNoElevador;
+    }
+
+    //subir
+    public void subir(int nAndares) {
+        if(andarAtual+nAndares<=totalAndares){
+        andarAtual+=nAndares;
+        }else{
+            System.out.println("já está no andar mais alto");
+    }
     }
 
 
 
 
-
-
-
-
-
-
-}
+    }
 
 
 
