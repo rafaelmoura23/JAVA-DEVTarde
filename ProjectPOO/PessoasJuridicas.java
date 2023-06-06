@@ -5,4 +5,11 @@ public class PessoasJuridicas {
     int cnpj;
     double conta;
     double saldo;
+
+    //metodos
+
+    //construtor
+    public PessoasJuridicas() {
+    }
+    
 }

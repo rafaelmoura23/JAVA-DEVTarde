@@ -11,26 +11,19 @@ public class App {
         //enquando for true o aplicativo estará rodando
         boolean logado = true;
 
-        while(true){
+        while(logado){
             System.out.println("O Que Deseja? " +"\n1-Criar Conta"+"\n2-Buscar Conta"+"\n3-Sair do App"); //primeira parte, perguntar se deseja criar ou buscar conta
             int primeiraAcao = sc.nextInt();
 
-            switch (primeiraAcao) {
-                case 1:
-                System.out.println("");
-                    break;
-                case 2:
-                System.out.println("");
-                    break;
-                case 3:
-                System.out.println("");
-                    break;
-                default:
-                System.out.println("Digite um valor válido!");
-                break;
+            if(primeiraAcao==1){
+
+            } else if(primeiraAcao==2){
+
+            } else if(primeiraAcao==3){
+                logado=false;
+            } else{
+                System.out.println("Digite uma opção Válida!");
             }
-
         }
-
     }
 }
