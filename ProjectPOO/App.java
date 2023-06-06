@@ -12,8 +12,23 @@ public class App {
         boolean logado = true;
 
         while(true){
-            System.out.println("O Que Deseja? " +"\n1-Criar Conta"+"\n2-Buscar Conta"); //primeira parte, perguntar se deseja criar ou buscar conta
-            int acao = sc.nextInt();
+            System.out.println("O Que Deseja? " +"\n1-Criar Conta"+"\n2-Buscar Conta"+"\n3-Sair do App"); //primeira parte, perguntar se deseja criar ou buscar conta
+            int primeiraAcao = sc.nextInt();
+
+            switch (primeiraAcao) {
+                case 1:
+                System.out.println("");
+                    break;
+                case 2:
+                System.out.println("");
+                    break;
+                case 3:
+                System.out.println("");
+                    break;
+                default:
+                System.out.println("Digite um valor válido!");
+                break;
+            }
 
         }
 
