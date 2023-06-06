@@ -8,7 +8,6 @@ public class Agenda {
     int idade;
     double altura;
     
-
     //métodos
     //construtor
     public Agenda(String nome, int idade, double altura) {
@@ -44,11 +43,5 @@ public class Agenda {
     // imprimir(void)
     public void imprimir() {
         JOptionPane.showMessageDialog(null, "Nome: "+nome +"\nAltura: " + altura +"\nIdade: " + idade );
-        
     }
-    
-    
-
-
-
 }
