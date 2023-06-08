@@ -16,7 +16,7 @@ public class App {
             //preencher os atributos (sets)
             contatos[i].setNome(JOptionPane.showInputDialog("Digite o Nome: "));
             contatos[i].setIdade(i+18);
-            contatos[i].setAltura(rd.nextDouble(1.5,2));
+            contatos[i].setAltura(rd.nextInt(12));
         }
         //criar um metodo para buscar uma pessoa do vetor array
         String buscarNome = JOptionPane.showInputDialog("Informe o nome a ser buscado ");
