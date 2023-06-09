@@ -18,7 +18,7 @@ public class Exercicios {
 
         for (int i = 0; i < linha; i++) { // linhas
             for (int j = 0; j < coluna; j++) { // colunas
-                matriz[i][j] = rd.nextInt(0, 9); // usando random
+                matriz[i][j] = rd.nextInt(9); // usando random
             }
         }
 
@@ -55,7 +55,7 @@ public class Exercicios {
 
     public void exercicio2() {
 
-        int numeroSorteado = rd.nextInt(0, 1000); // sortear um número de 0 a 1000
+        int numeroSorteado = rd.nextInt(1000); // sortear um número de 0 a 1000
         int palpite;
         boolean tenteNovamente = true;
         int contTentativas = 0; // contando as tentativas
@@ -79,12 +79,12 @@ public class Exercicios {
 
     public void exercicio3() {
 
-        int sorteioVetor = rd.nextInt(100, 1000); // sortear um vetor com números de 100 a 1000
+        int sorteioVetor = rd.nextInt(1000); // sortear um vetor com números de 100 a 1000
 
         int[] vetor = new int[sorteioVetor]; // vetor com o tamanho sorteado
 
         for (int i = 0; i < sorteioVetor; i++) {
-            vetor[i] = rd.nextInt(1, 100); // sorteando os valores do vetor
+            vetor[i] = rd.nextInt(100); // sorteando os valores do vetor
         }
         System.out.println("Números PARES:");  
         for (int i = 0; i < vetor.length; i++) {  

@@ -28,7 +28,7 @@ public class MatrizExercicios {
         // preencher a matriz 4x4 com random
         for(int i = 0; i < matriz.length; i++ ){
             for (int j = 0; j < matriz.length; j++) { 
-                matriz[i][j] = rd.nextInt(10, 50); 
+                matriz[i][j] = rd.nextInt( 50); 
             }
         }
         //printar a matriz 
@@ -61,7 +61,7 @@ public class MatrizExercicios {
         int valorX;
         for(int i = 0; i < matriz.length; i++ ){ // 1ª dimensão
             for (int j = 0; j < matriz.length; j++) { // 2ª dimensão
-                matriz[i][j] = rd.nextInt(10,99); 
+                matriz[i][j] = rd.nextInt(99); 
             }
         }
          //printar a matriz 
