@@ -1,6 +1,5 @@
 package ProjectPOO;
 
-import java.util.Scanner;
 
 import ExercicioPOO.Pessoa;
 
@@ -12,8 +11,28 @@ public class CriacaoContas {
 
 
     public void cadastroFisico() {
+
         
+    }
+
+    public void cadastroJuridico() {
         
     }
      
+    public void buscarPessoaLoop(String nome) {
+        boolean encontrou = false;
+        for (int i = 0; i < vPessoas.length; i++) {
+            if(vPessoas[i].getNome().equalsIgnoreCase(nome)){
+                System.out.println("Pessoa Encontrada");
+                System.out.println("Nome: " + vPessoas[i].getNome());
+                System.out.println("Saldo: " + vPessoas[i]);
+                System.out.println("Número da Conta: " + vPessoas[i]);
+                encontrou=true;
+            }
+        }
+        if(!encontrou){
+            System.out.println("A Pessoa não foi Encontrada! ");
+        }
+        
+    }
 }
