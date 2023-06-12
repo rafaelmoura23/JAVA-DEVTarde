@@ -49,13 +49,12 @@ public class Pessoa {
         if(valor>=saldo){
             System.out.println("Saldo Insuficiente para Sacar");
         } else{
-            
-        }
-        
+            saldo-=valor;
+             System.out.println("Você sacou " +valor+ " Reais." );
+        }        
     }
-    
-    
 
-
-
+    public void saldoAtual() {  //metodo para imprimir o saldo atual do usuario
+        System.out.println("Seu saldo Atual é de: " +saldo+ " Reais.");
+    }
     }
