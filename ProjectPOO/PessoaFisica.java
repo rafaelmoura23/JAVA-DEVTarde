@@ -4,15 +4,12 @@ public class PessoaFisica extends Pessoa{  //classe pessoFisica tem herança com
 
     String cpf;
 
-    public PessoaFisica(String nome, double saldo, int nDaConta, String cpf2) { //super-construtor ?????
-        super(nome, saldo, nDaConta);
+    public PessoaFisica(String nome, double saldo, String cpf) { 
+        super(nome, saldo);
         this.cpf = cpf;
     }
-
-    //gett and sett de cpf
 
     public String getCpf() {
         return cpf;
     }
-
-    }
+}
