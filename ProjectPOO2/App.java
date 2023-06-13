@@ -19,7 +19,7 @@ public class App {
                                                         +"\n 2-Criar Conta Jurídica;"
                                                         +"\n 3-Acessar Conta;"
                                                         +"\n 4-Sair."));
-            if(acao==1){ //criar a conta
+            if(acao==1){//criar a conta Pessoa física
                 //criar um objeto (construtor)
                 clientePf[contPf] = new ContaPF();//obj/conta esta criado
                 //preencher as informações da conta
@@ -30,17 +30,7 @@ public class App {
                 //acrescimo do contador
                 contPf++;
 
-            } else if(acao==2){ //criar conta
-                //criar um objeto (construtor)
-                clientePj[contPj] = new ContaPJ(); //obj/conta criado
-                clientePj[contPj].setNome(JOptionPane.showInputDialog("Digite o Nome do Cliente"));
-                clientePj[contPj].setnCnpj(JOptionPane.showInputDialog("Informe o CNPJ do Cliente"));
-                clientePj[contPj].setSaldo(0);
-                clientePj[contPj].setnConta(2000+contPj+1);
-                 //acrescimo do contador
-                contPj++;
-
-            }else if(acao==3){//acessar a conta
+            } else if(acao==3){//acessar a conta
                 //buscar a conta no vetor
                 int nContaBuscada = Integer.parseInt(JOptionPane.showInputDialog("Informe o nº da Conta a ser buscada:"));
                 int contaAtual = 0;
