@@ -77,7 +77,6 @@ public class App {
                         }
                 }
  
-
             } else if(acao==4){
                  //buscar a conta no vetor
                 int nContaBuscada = Integer.parseInt(JOptionPane.showInputDialog("Informe o nº da Conta a ser buscada:"));
@@ -91,7 +90,6 @@ public class App {
                         break;
                     }
                 }
-
                 //entrar na conta do cliente
                  boolean acessarPJ = true;
                 while (acessarPJ) {
@@ -116,8 +114,6 @@ public class App {
                             clientePj[contaAtual].Emprestimo();
                         }
                 }
-
-
             }else if(acao==5){
                 logado = false;
                 JOptionPane.showMessageDialog(null,"Volte Sempre!");
