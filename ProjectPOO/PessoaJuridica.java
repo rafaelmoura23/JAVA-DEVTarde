@@ -5,8 +5,9 @@ public class PessoaJuridica extends Pessoa{ //classe pessojusridica tem herança
     String cnpj;
 
     //construtor
-    public PessoaJuridica(String nome, double saldo, int nDaConta) { 
+    public PessoaJuridica(String nome, double saldo, int nDaConta, String cnpj2) { 
         super(nome, saldo, nDaConta);
+        this.cnpj = cnpj;
     }  
 
     //gett and sett de cnpj
@@ -14,9 +15,5 @@ public class PessoaJuridica extends Pessoa{ //classe pessojusridica tem herança
     public String getCnpj() {
         return cnpj;
     }
-
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
-    } 
+} 
     
-}

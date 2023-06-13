@@ -4,57 +4,48 @@ public class Pessoa {
     //atributos
     String nome;
     double saldo;
-    int nDaConta;
+    int numeroConta;
 
-    //metodos
     //construtor
-    public Pessoa(String nome, double saldo, int nDaConta) {
+    public Pessoa(String nome, double saldo) {
         this.nome = nome;
         this.saldo = saldo;
-        this.nDaConta = nDaConta;
+        this.numeroConta = gerarNumeroConta;
     }
 
-     //getter and setters
+    //getts and setts
     public String getNome() {
         return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public double getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
+    public int getNumeroConta() {
+        return numeroConta;
     }
 
-    public int getnDaConta() {
-        return nDaConta;
-    }
-
-    public void setnDaConta(int nDaConta) {
-        this.nDaConta = nDaConta;
-    }
-
-    //outros metodos (sacar, depositar e saldo?), metodos do tipo void(vazio)
-    public void deposito(double valor) { //metodo deposito, valor = valor depositado
-        saldo+=valor; //o valor depositado será somado ao saldo atual
-        System.out.println("Você depositou " +valor+ " Reais.");
-    }
-
-    public void saque(double valor) { // metodo saque, valor = valor que o usuario ira sacar
+    //outros metodos
+    public void sacar(double valor) {
         if(valor>=saldo){
-            System.out.println("Saldo Insuficiente para Sacar");
+            System.out.println("Saldo insuficiente");
         } else{
             saldo-=valor;
-             System.out.println("Você sacou " +valor+ " Reais." );
-        }        
+            System.out.println("Você Sacou " +valor+ " Reais.");
+        }
     }
 
-    public void saldoAtual() {  //metodo para imprimir o saldo atual do usuario
-        System.out.println("Seu saldo Atual é de: " +saldo+ " Reais.");
+    public void depositar(double valor) {
+        saldo+=valor;
+        System.out.println("Você Depositou " +valor+ " Reais.");    
     }
+
+    public void saldoAtual() {
+        System.out.println("Saldo Atual: " +saldo);
     }
+
+    int gerarNumeroConta(){
+        return (int) (Math.random() *10000);
+    }
+}
