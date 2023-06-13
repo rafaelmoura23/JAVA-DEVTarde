@@ -9,16 +9,17 @@ public class App {
         //criar um vetor das contas
         ContaPF clientePf[] = new ContaPF[10];//clientes pf
         ContaPJ clientePj[] = new ContaPJ[10];//clientes pj
-        boolean aberta = true;
+        boolean logado = true;
         int contPf=0;
         int contPj=0;
 
-        while(aberta){
+        while(logado){
             int acao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma ação:"
                                                         +"\n 1-Criar Conta Física;"
                                                         +"\n 2-Criar Conta Jurídica;"
-                                                        +"\n 3-Acessar Conta;"
-                                                        +"\n 4-Sair."));
+                                                        +"\n 3-Acessar Conta Física;"
+                                                        +"\n 4-Acessar Conta Jurídica"
+                                                        +"\n 5-Sair."));
             if(acao==1){//criar a conta Pessoa física
                 //criar um objeto (construtor)
                 clientePf[contPf] = new ContaPF();//obj/conta esta criado
@@ -52,8 +53,8 @@ public class App {
                     }
                 }
                 //entrar na conta do cliente
-                boolean acessar = true;
-                while (acessar) {
+                boolean acessarPF = true;
+                while (acessarPF) {
                     int acao2 = Integer.parseInt(JOptionPane.showInputDialog(
                         "Informe a ação desejada"
                         +"\n 1-Verificar saldo"
@@ -75,9 +76,50 @@ public class App {
                             clientePf[contaAtual].Emprestimo();
                         }
                 }
+ 
 
             } else if(acao==4){
-                aberta = false;
+                 //buscar a conta no vetor
+                int nContaBuscada = Integer.parseInt(JOptionPane.showInputDialog("Informe o nº da Conta a ser buscada:"));
+                int contaAtual = 0;
+                for (int i = 0; i < clientePj.length; i++) {
+                    if(nContaBuscada==clientePj[i].getnConta()){
+                        //encontrei a posição da conta no vetor
+                        //preciso guardar o "i"
+                        contaAtual = i;
+                        JOptionPane.showMessageDialog(null,"Cliente Encontrado");
+                        break;
+                    }
+                }
+
+                //entrar na conta do cliente
+                 boolean acessarPJ = true;
+                while (acessarPJ) {
+                    int acao2 = Integer.parseInt(JOptionPane.showInputDialog(
+                        "Informe a ação desejada"
+                        +"\n 1-Verificar saldo"
+                        +"\n 2-Saque"
+                        +"\n 3-Deposito"
+                        +"\n 4-Empréstimo"));
+                        if(acao2==1){
+                            JOptionPane.showMessageDialog(
+                                null,clientePj[contaAtual].getSaldo());
+                        } else if(acao2==2){
+                            //sacar
+                            clientePj[contaAtual].Saque();
+                        } else if(acao2==3){
+                            //depositar
+                            clientePj[contaAtual].Deposito();
+                             
+                        } else if(acao2==4){
+                            //emprestimo
+                            clientePj[contaAtual].Emprestimo();
+                        }
+                }
+
+
+            }else if(acao==5){
+                logado = false;
                 JOptionPane.showMessageDialog(null,"Volte Sempre!");
             } else{
                 JOptionPane.showMessageDialog(null,"Informe uma Opção Válida!");

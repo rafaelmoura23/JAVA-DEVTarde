@@ -53,7 +53,6 @@ public abstract class Conta {
         } else if(valor>10001){
             JOptionPane.showMessageDialog(null,"Você extrapolou o valor máximo de empréstimo.");
         }
-        
     }
 }
 
