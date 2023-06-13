@@ -1,6 +1,6 @@
 package ProjectPOO2.Conta;
 
-public class ContaPJ {
+public class ContaPJ extends Conta {
     String nCnpj;
 
     //gett and setts

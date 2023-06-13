@@ -3,18 +3,23 @@ package ProjectPOO2;
 import javax.swing.JOptionPane;
 
 import ProjectPOO2.Conta.ContaPF;
+import ProjectPOO2.Conta.ContaPJ;
 
 public class App {
     public static void main(String[] args) {
         //criar um vetor das contas
-        ContaPF clientePf[] = new ContaPF[10];//cleintes pf
+        ContaPF clientePf[] = new ContaPF[10];//clientes pf
+        ContaPJ clientePj[] = new ContaPJ[10];//clientes pj
         boolean aberta = true;
         int contPf=0;
+        int contPj=0;
+
         while(aberta){
             int acao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma ação:"
-                                                        +"\n 1-Criar Conta;"
-                                                        +"\n 2-Acessar Conta;"
-                                                        +"\n 3-Sair."));
+                                                        +"\n 1-Criar Conta Física;"
+                                                        +"\n 2-Criar Conta Jurídica;"
+                                                        +"\n 3-Acessar Conta;"
+                                                        +"\n 4-Sair."));
             if(acao==1){ //criar a conta
                 //criar um objeto (construtor)
                 clientePf[contPf] = new ContaPF();//obj/conta esta criado
@@ -25,7 +30,18 @@ public class App {
                 clientePf[contPf].setnConta(1000+contPf+1);
                 //acrescimo do contador
                 contPf++;
-            } else if(acao==2){//acessar a conta
+
+            } else if(acao==2){ //criar conta
+                //criar um objeto (construtor)
+                clientePj[contPj] = new ContaPJ(); //obj/conta criado
+                clientePj[contPj].setNome(JOptionPane.showInputDialog("Digite o Nome do Cliente"));
+                clientePj[contPj].setnCnpj(JOptionPane.showInputDialog("Informe o CNPJ do Cliente"));
+                clientePj[contPj].setSaldo(0);
+                clientePj[contPj].setnConta(2000+contPj+1);
+                 //acrescimo do contador
+                contPj++;
+                
+            }else if(acao==3){//acessar a conta
                 //buscar a conta no vetor
                 int nContaBuscada = Integer.parseInt(JOptionPane.showInputDialog("Informe o nº da Conta a ser buscada:"));
                 int contaAtual = 0;
