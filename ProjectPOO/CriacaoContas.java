@@ -23,13 +23,15 @@ public class CriacaoContas {
         System.out.println("Escolha o tipo de conta: \n 1 - Pessoa Física  \n 2 - Pessoa Jurídica");
         int tipoConta = sc.nextInt();
 
+        sc.nextLine();
+
         Pessoa pessoa;
 
         if(tipoConta == 1){
             System.out.println("Digite o CPF: ");
             String cpf = sc.nextLine();
             pessoa = new PessoaFisica(nome, saldo, cpf);
-        } else{
+        } else {
             System.out.println("Digite o CNPJ: ");
             String cnpj = sc.nextLine();
             pessoa = new PessoaJuridica(nome, saldo, cnpj);
@@ -43,7 +45,7 @@ public class CriacaoContas {
 
     public void buscarContaNome(String nome) {
         for (int i = 0; i < numContas; i++) {
-            if(contas[i].getNome().equals(nome)){
+            if(contas[i].getNome().equals(nome)) {
                 System.out.println("Conta encontrada:");
                 System.out.println("Nome: " + contas[i].getNome());
                 System.out.println("Número da conta: " + contas[i].getNumeroConta());
@@ -53,5 +55,5 @@ public class CriacaoContas {
         }
         System.out.println("Conta não Encontrada!");
     }
-    }
+}
     

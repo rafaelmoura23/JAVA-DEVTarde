@@ -3,13 +3,13 @@ package ProjectPOO;
 public class Pessoa { 
     //atributos
     String nome;
-    double saldo;
+    static double saldo;
     int numeroConta;
 
     //construtor
     public Pessoa(String nome, double saldo) {
         this.nome = nome;
-        this.saldo = saldo;
+        Pessoa.saldo = saldo;
         this.numeroConta = gerarNumeroConta();
     }
 
@@ -27,7 +27,7 @@ public class Pessoa {
     }
 
     //outros metodos
-    public void sacar(double valor) {
+    public static void sacar(double valor) {
         if(valor>=saldo){
             System.out.println("Saldo insuficiente");
         } else{
@@ -36,12 +36,12 @@ public class Pessoa {
         }
     }
 
-    public void depositar(double valor) {
+    public static void depositar(double valor) {
         saldo+=valor;
         System.out.println("Você Depositou " +valor+ " Reais.");    
     }
 
-    public void saldoAtual() {
+    public static void saldoAtual() {
         System.out.println("Saldo Atual: " +saldo);
     }
 
