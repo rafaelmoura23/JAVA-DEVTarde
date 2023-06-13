@@ -10,7 +10,7 @@ public class Pessoa {
     public Pessoa(String nome, double saldo) {
         this.nome = nome;
         this.saldo = saldo;
-        this.numeroConta = gerarNumeroConta;
+        this.numeroConta = gerarNumeroConta();
     }
 
     //getts and setts
