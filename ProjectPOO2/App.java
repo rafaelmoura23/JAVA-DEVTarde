@@ -74,7 +74,7 @@ public class App {
                              
                         } else if(acao2==4){
                             //emprestimo
-                             
+                            clientePf[contaAtual].Emprestimo();
                         }
                 }
 
