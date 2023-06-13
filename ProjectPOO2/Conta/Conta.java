@@ -1,6 +1,8 @@
 package ProjectPOO2.Conta;
 
-public class Conta {
+import javax.swing.JOptionPane;
+
+public abstract class Conta {
     
     String nome;
     int nConta;
@@ -24,5 +26,22 @@ public class Conta {
     }
     public void setSaldo(double saldo) {
         this.saldo = saldo;
+    }
+
+    //outros metodos
+    public void Saque() {
+        int valor = Integer.parseInt(JOptionPane.showInputDialog("Quanto Deseja Sacar?"));
+        if(saldo>valor){
+            JOptionPane.showMessageDialog(null,"Você sacou " +valor+ " Reais.");
+            saldo-=valor;
+        } else{
+            JOptionPane.showMessageDialog(null,"Saldo Insuficiente.");
+        }
+    }
+    
+    public void Deposito(){
+        int valor = Integer.parseInt(JOptionPane.showInputDialog("Quanto Deseja Depositar?"));
+        JOptionPane.showMessageDialog(null,"Você Depositou " +valor+ " Reais.");
+        saldo+=valor;
     }
 }

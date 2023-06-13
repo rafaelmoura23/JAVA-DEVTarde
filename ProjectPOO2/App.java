@@ -1,7 +1,6 @@
 package ProjectPOO2;
 
 import javax.swing.JOptionPane;
-
 import ProjectPOO2.Conta.ContaPF;
 import ProjectPOO2.Conta.ContaPJ;
 
@@ -40,7 +39,7 @@ public class App {
                 clientePj[contPj].setnConta(2000+contPj+1);
                  //acrescimo do contador
                 contPj++;
-                
+
             }else if(acao==3){//acessar a conta
                 //buscar a conta no vetor
                 int nContaBuscada = Integer.parseInt(JOptionPane.showInputDialog("Informe o nº da Conta a ser buscada:"));
@@ -59,16 +58,31 @@ public class App {
                 while (acessar) {
                     int acao2 = Integer.parseInt(JOptionPane.showInputDialog(
                         "Informe a ação desejada"
-                        +"\n 1-verificar saldo"
+                        +"\n 1-Verificar saldo"
                         +"\n 2-Saque"
-                        +"\n ..."));
+                        +"\n 3-Deposito"
+                        +"\n 4-Empréstimo"));
                         if(acao2==1){
                             JOptionPane.showMessageDialog(
                                 null,clientePf[contaAtual].getSaldo());
+                        } else if(acao2==2){
+                            //sacar
+                            clientePf[contaAtual].Saque();
+                        } else if(acao2==3){
+                            //depositar
+                            clientePf[contaAtual].Deposito();
+                             
+                        } else if(acao2==4){
+                            //emprestimo
+                             
                         }
                 }
 
-
+            } else if(acao==4){
+                aberta = false;
+                JOptionPane.showMessageDialog(null,"Volte Sempre!");
+            } else{
+                JOptionPane.showMessageDialog(null,"Informe uma Opção Válida!");
             }
         }
 
