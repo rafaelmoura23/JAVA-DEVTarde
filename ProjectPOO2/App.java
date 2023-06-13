@@ -30,6 +30,14 @@ public class App {
                 //acrescimo do contador
                 contPf++;
 
+            }else if(acao==2){ //criar conta Pessoa Juridica
+                clientePj[contPj] = new ContaPJ(); 
+                clientePj[contPj].setNome(JOptionPane.showInputDialog("Digite o Nome do Cliente"));
+                clientePj[contPj].setnCnpj(JOptionPane.showInputDialog("Informe o CNPJ do Cliente"));
+                clientePj[contPj].setSaldo(0);
+                clientePj[contPj].setnConta(5000+contPj+1);
+                contPj++;
+
             } else if(acao==3){//acessar a conta
                 //buscar a conta no vetor
                 int nContaBuscada = Integer.parseInt(JOptionPane.showInputDialog("Informe o nº da Conta a ser buscada:"));
