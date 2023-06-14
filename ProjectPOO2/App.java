@@ -28,6 +28,7 @@ public class App {
                 clientePf[contPf].setnCpf(JOptionPane.showInputDialog("Informe o CPF do Cliente"));
                 clientePf[contPf].setSaldo(0);
                 clientePf[contPf].setnConta(1000+contPf+1);
+                clientePf[contPf].setIdade(Integer.parseInt(JOptionPane.showInputDialog("Digite a Idade do Cliente")));
                 //acrescimo do contador
                 contPf++;
 
