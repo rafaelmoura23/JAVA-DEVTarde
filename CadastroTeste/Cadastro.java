@@ -35,10 +35,4 @@ public class Cadastro{
     public void setnParticipantes(int nParticipantes) {
         this.nParticipantes = nParticipantes;
     }
-
-    
-    
-
-
-    
 }
