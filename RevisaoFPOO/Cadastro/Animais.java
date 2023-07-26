@@ -8,9 +8,8 @@ public abstract class Animais {
     String especie;
 
     //metodos
+
     //construtor vazio
-    public Animais() {
-    }
 
     //getts and setts
     public double getPeso() {
@@ -43,6 +42,14 @@ public abstract class Animais {
 
     public void setEspecie(String especie) {
         this.especie = especie;
+    }
+
+    // printar todas as informações
+    public void imprimir() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Proprietario: " + proprietario);
+        System.out.println("Peso: " +peso);
+        System.out.println("Especie: " +especie);
     }
     
 }

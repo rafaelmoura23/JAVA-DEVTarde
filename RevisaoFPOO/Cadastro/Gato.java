@@ -1,14 +1,14 @@
 package RevisaoFPOO.Cadastro;
 
 public class Gato extends Animais {
-    double salto;
+    int salto;
     String nVidas;
 
     //getts and setts
-    public double getSalto() {
+    public int getSalto() {
         return salto;
     }
-    public void setSalto(double salto) {
+    public void setSalto(int salto) {
         this.salto = salto;
     }
     public String getnVidas() {
@@ -17,7 +17,4 @@ public class Gato extends Animais {
     public void setnVidas(String nVidas) {
         this.nVidas = nVidas;
     }
-
-    
-    
 }
