@@ -1,37 +1,18 @@
 package RevisaoFPOO.Cadastro;
 
-public class Animais {
+public abstract class Animais {
     //Atributos
-    String porte;
     double peso;
     String proprietario;
     String nome;
     String especie;
 
     //metodos
-
-    //construtor cheio
-    public Animais(String porte, double peso, String proprietario, String nome, String especie) {
-        this.porte = porte;
-        this.peso = peso;
-        this.proprietario = proprietario;
-        this.nome = nome;
-        this.especie = especie;
-    }
-
     //construtor vazio
     public Animais() {
     }
 
     //getts and setts
-    public String getPorte() {
-        return porte;
-    }
-
-    public void setPorte(String porte) {
-        this.porte = porte;
-    }
-
     public double getPeso() {
         return peso;
     }
@@ -63,7 +44,5 @@ public class Animais {
     public void setEspecie(String especie) {
         this.especie = especie;
     }
-    
-    //metodos proprios
     
 }
