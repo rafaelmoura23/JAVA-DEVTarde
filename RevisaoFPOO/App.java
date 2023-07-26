@@ -5,11 +5,15 @@ import javax.swing.JOptionPane;
 import RevisaoFPOO.Cadastro.Animais;
 import RevisaoFPOO.Cadastro.Gato;
 import RevisaoFPOO.Cadastro.Cachorro;
+import RevisaoFPOO.Cadastro.Leao;
+import RevisaoFPOO.Cadastro.Lebre;
 
 public class App {
     public static void main(String[] args) {
         Gato animal1[] = new Gato[5];
         Cachorro animal2[] = new Cachorro[5];
+        Leao animal3[] = new Leao[5];
+        Lebre animal4[]= new Lebre[5];
         boolean cadastrando = true;
         int cont1=0; //gato
         int cont2=0; //cachorro
@@ -55,6 +59,40 @@ public class App {
                 +"\n Peso: " + animal2[cont2].getPeso() + " Kg"
                 +"\n Volume do Latido: " + animal2[cont2].getVolumeLatido() +" Db"
                 +"\n Tipo de Cachorro: " + animal2[cont2].getTipo()
+                );
+
+            } else if(opcao==3){
+                animal3[cont3] = new Leao();
+                animal3[cont3].setNome(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
+                animal3[cont3].setEspecie("Cachorro");
+                animal3[cont3].setProprietario(JOptionPane.showInputDialog("Digite o Nome do Proprietário:"));
+                animal3[cont3].setAlomoco(JOptionPane.showInputDialog("Digite o Almoço do Leão:"));
+                animal3[cont3].setPeso(300);
+                animal3[cont3].setNomeSavana(JOptionPane.showInputDialog("Nome da Savana em que o Leão é Rei: "));
+
+                JOptionPane.showMessageDialog(null, "Nome do Animal: "+animal3[cont3].getNome()
+                +"\n Espécie do Animal: " +animal3[cont3].getEspecie()
+                +"\n Proprietário: " + animal3[cont3].getProprietario()
+                +"\n Peso: " + animal3[cont3].getPeso() + " Kg"
+                +"\n Almoço do Leão: " + animal3[cont3].getAlomoco() 
+                +"\n Nome da Savana: " + animal3[cont3].getNomeSavana()
+                );
+
+            }else if(opcao==4){
+                animal4[cont4] = new Lebre();
+                animal4[cont4].setNome(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
+                animal4[cont4].setEspecie("Cachorro");
+                animal4[cont4].setProprietario(JOptionPane.showInputDialog("Digite o Nome do Proprietário:"));
+                animal4[cont4].setVelocidade(140);
+                animal4[cont4].setPeso(400);
+                animal4[cont4].setCorridasVencidas(cont4+9);
+
+                JOptionPane.showMessageDialog(null, "Nome do Animal: "+animal4[cont4].getNome()
+                +"\n Espécie do Animal: " +animal4[cont4].getEspecie()
+                +"\n Proprietário: " + animal4[cont4].getProprietario()
+                +"\n Peso: " + animal4[cont4].getPeso() + " Kg"
+                +"\n Velocidade: " + animal4[cont4].getVelocidade() +" Km/h"
+                +"\n Corridas Vencidas: " + animal4[cont4].getCorridasVencidas()
                 );
 
             }else if(opcao==5){
