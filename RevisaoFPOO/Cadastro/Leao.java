@@ -1,14 +1,14 @@
 package RevisaoFPOO.Cadastro;
 
 public class Leao extends Animais {
-    String alomoco;
+    String almoco;
     String nomeSavana;
 
-    public String getAlomoco() {
-        return alomoco;
+    public String getAlmoco() {
+        return almoco;
     }
-    public void setAlomoco(String alomoco) {
-        this.alomoco = alomoco;
+    public void setAlmoco(String almoco) {
+        this.almoco = almoco;
     }
     public String getNomeSavana() {
         return nomeSavana;

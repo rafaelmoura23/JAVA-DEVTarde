@@ -66,7 +66,7 @@ public class App {
                 animal3[cont3].setNome(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
                 animal3[cont3].setEspecie("Cachorro");
                 animal3[cont3].setProprietario(JOptionPane.showInputDialog("Digite o Nome do Proprietário:"));
-                animal3[cont3].setAlomoco(JOptionPane.showInputDialog("Digite o Almoço do Leão:"));
+                animal3[cont3].setAlmoco(JOptionPane.showInputDialog("Digite o Almoço do Leão:"));
                 animal3[cont3].setPeso(300);
                 animal3[cont3].setNomeSavana(JOptionPane.showInputDialog("Nome da Savana em que o Leão é Rei: "));
 
@@ -74,7 +74,7 @@ public class App {
                 +"\n Espécie do Animal: " +animal3[cont3].getEspecie()
                 +"\n Proprietário: " + animal3[cont3].getProprietario()
                 +"\n Peso: " + animal3[cont3].getPeso() + " Kg"
-                +"\n Almoço do Leão: " + animal3[cont3].getAlomoco() 
+                +"\n Almoço do Leão: " + animal3[cont3].getAlmoco() 
                 +"\n Nome da Savana: " + animal3[cont3].getNomeSavana()
                 );
 
