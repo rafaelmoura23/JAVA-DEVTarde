@@ -112,12 +112,13 @@ public class App {
             }
             } else if(opcaoInicio==2){
                  boolean checkAgenda = true;
-                while (checkAgenda) {
+
                 JOptionPane.showMessageDialog(null,"Bem vindo(a) a Central de Agendamento de Consultas");
                 agenda[contAgenda] = new AgendaConsulta();
                 agenda[contAgenda].setData(JOptionPane.showInputDialog("Informe a Data da Consulta:"));
                 agenda[contAgenda].setHorario(JOptionPane.showInputDialog("Informe o Horário da Consulta:"));
-                String dataHora = agenda[contAgenda].getData()+agenda[contAgenda].getHorario() ;
+
+                String dataHora = agenda[contAgenda].getData() + agenda[contAgenda].getHorario() ;
                     for (int i = 0; i < contAgenda; i++) {
                         if(agenda[i].getAgendamento()==dataHora){
                             JOptionPane.showMessageDialog(null, "Agenda Indisponível, escolha outro Agendamento!");
@@ -126,10 +127,10 @@ public class App {
                             agenda[contAgenda].setVeterinario(JOptionPane.showInputDialog("Informe o Nome do Dr.Veterinário:"));
                             JOptionPane.showMessageDialog(null, "Agendamento Efetuado com sucesso!");
                         }
-                    }
 
                     
                 }
+                contAgenda++;
 
             } else if(opcaoInicio==3){
                 cadastrando = false;
