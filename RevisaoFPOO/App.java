@@ -117,7 +117,7 @@ public class App {
                 agenda[contAgenda] = new AgendaConsulta();
                 agenda[contAgenda].setData(JOptionPane.showInputDialog("Informe a Data da Consulta:"));
                 agenda[contAgenda].setHorario(JOptionPane.showInputDialog("Informe o Horário da Consulta:"));
-                int dataHora = ;
+                String dataHora = agenda[contAgenda].getData()+agenda[contAgenda].getHorario() ;
                     for (int i = 0; i < contAgenda; i++) {
                         if(agenda[i].getAgendamento()==dataHora){
                             JOptionPane.showMessageDialog(null, "Agenda Indisponível, escolha outro Agendamento!");
