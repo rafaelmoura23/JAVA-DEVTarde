@@ -110,6 +110,7 @@ public class App {
                 JOptionPane.showMessageDialog(null,"Informe uma opção válida!");
             }
             } else if(opcaoInicio==2){
+                JOptionPane.showMessageDialog(null,"Bem vindo(a) a Central de Agendamento de Consultas");
                 
             } else if(opcaoInicio==3){
                 cadastrando = false;
