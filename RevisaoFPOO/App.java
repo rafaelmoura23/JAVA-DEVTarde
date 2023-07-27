@@ -19,6 +19,7 @@ public class App {
         int cont2=0; //cachorro
         int cont3=0; //leao
         int cont4=0; //lebre
+        int contAgenda=0;
         AgendaConsulta agenda[] = new AgendaConsulta[10];
 
         JOptionPane.showMessageDialog(null, "Bem vindo ao Consultório do Dr.Veterinário!");
@@ -111,7 +112,11 @@ public class App {
             }
             } else if(opcaoInicio==2){
                 JOptionPane.showMessageDialog(null,"Bem vindo(a) a Central de Agendamento de Consultas");
-                
+                agenda[contAgenda] = new AgendaConsulta();
+                agenda[contAgenda].setCliente(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
+                agenda[contAgenda].setData(JOptionPane.showInputDialog("Informe a Data da Consulta:"));
+                agenda[contAgenda].setHorario(JOptionPane.showInputDialog("Informe o Horário da Consulta:"));
+                agenda[contAgenda].setVeterinario(JOptionPane.showInputDialog("Informe o Nome do Dr.Veterinário:"));
             } else if(opcaoInicio==3){
                 cadastrando = false;
                 JOptionPane.showMessageDialog(null,"Até Breve!");
