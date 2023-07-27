@@ -2,9 +2,11 @@ package RevisaoFPOO;
 
 import javax.swing.JOptionPane;
 import RevisaoFPOO.Cadastro.Gato;
+import RevisaoFPOO.Cadastro.Animais;
 import RevisaoFPOO.Cadastro.Cachorro;
 import RevisaoFPOO.Cadastro.Leao;
 import RevisaoFPOO.Cadastro.Lebre;
+import RevisaoFPOO.Horario.AgendaConsulta;
 
 public class App {
     public static void main(String[] args) {
@@ -17,17 +19,23 @@ public class App {
         int cont2=0; //cachorro
         int cont3=0; //leao
         int cont4=0; //lebre
+        AgendaConsulta agenda[] = new AgendaConsulta[10];
 
         JOptionPane.showMessageDialog(null, "Bem vindo ao Consultório do Dr.Veterinário!");
         while(cadastrando){
-            int opcao = Integer.parseInt(JOptionPane.showInputDialog("Escolha um Animal:"
-                                                        +"\n 1-Gato"
-                                                        +"\n 2-Cachorro"
-                                                        +"\n 3-Leão"
-                                                        +"\n 4-Lebre"
-                                                        +"\n 5-Agendar Consulta."
-                                                        +"\n 6-Sair."));
-            if(opcao==1){
+            int opcaoInicio = Integer.parseInt(JOptionPane.showInputDialog("Escolha o que quer fazer:"
+                                                        +"\n 1- Cadastrar Animais"
+                                                        +"\n 2- Agendar Consultas"
+                                                        +"\n 3- Sair"));
+            if(opcaoInicio==1){
+                int opcaoDentro = Integer.parseInt(JOptionPane.showInputDialog(null, "Escolha um Animal:"
+                +"\n 1-Gato"
+                +"\n 2-Cachorro"
+                +"\n 3-Leão"
+                +"\n 4-Lebre"
+                +"\n 5-Sair."));
+
+            if(opcaoDentro ==1){
                 animal1[cont1] = new Gato(); //objeto
                 animal1[cont1].setNome(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
                 animal1[cont1].setEspecie("Gato");
@@ -44,7 +52,7 @@ public class App {
                 +"\n Saltos: " + animal1[cont1].getSalto()
                 );
 
-            }else if(opcao==2){
+            }else if(opcaoDentro==2){
                 animal2[cont2] = new Cachorro();
                 animal2[cont2].setNome(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
                 animal2[cont2].setEspecie("Cachorro");
@@ -61,7 +69,7 @@ public class App {
                 +"\n Tipo de Cachorro: " + animal2[cont2].getTipo()
                 );
 
-            } else if(opcao==3){
+            } else if(opcaoDentro==3){
                 animal3[cont3] = new Leao();
                 animal3[cont3].setNome(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
                 animal3[cont3].setEspecie("Cachorro");
@@ -78,7 +86,7 @@ public class App {
                 +"\n Nome da Savana: " + animal3[cont3].getNomeSavana()
                 );
 
-            }else if(opcao==4){
+            }else if(opcaoDentro==4){
                 animal4[cont4] = new Lebre();
                 animal4[cont4].setNome(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
                 animal4[cont4].setEspecie("Cachorro");
@@ -95,15 +103,21 @@ public class App {
                 +"\n Corridas Vencidas: " + animal4[cont4].getCorridasVencidas()
                 );
 
-            }else if(opcao==5){
-                
-
-            }else if(opcao==6){
+            }else if(opcaoDentro==5){
                 cadastrando = false;
                 JOptionPane.showMessageDialog(null,"Cadastro Efetuado");
             } else{
                 JOptionPane.showMessageDialog(null,"Informe uma opção válida!");
-            }                                                
+            }
+            } else if(opcaoInicio==2){
+                
+            } else if(opcaoInicio==3){
+                cadastrando = false;
+                JOptionPane.showMessageDialog(null,"Até Breve!");
+            } else{
+                JOptionPane.showMessageDialog(null,"Informe uma opção válida!");
+            }
+                                                            
         }
     }
 }
