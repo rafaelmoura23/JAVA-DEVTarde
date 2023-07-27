@@ -1,7 +1,6 @@
 package RevisaoFPOO;
 
 import javax.swing.JOptionPane;
-
 import RevisaoFPOO.Cadastro.Gato;
 import RevisaoFPOO.Cadastro.Cachorro;
 import RevisaoFPOO.Cadastro.Leao;
@@ -19,13 +18,15 @@ public class App {
         int cont3=0; //leao
         int cont4=0; //lebre
 
+        JOptionPane.showMessageDialog(null, "Bem vindo ao Consultório do Dr.Veterinário!");
         while(cadastrando){
             int opcao = Integer.parseInt(JOptionPane.showInputDialog("Escolha um Animal:"
                                                         +"\n 1-Gato"
                                                         +"\n 2-Cachorro"
                                                         +"\n 3-Leão"
                                                         +"\n 4-Lebre"
-                                                        +"\n 5-Sair."));
+                                                        +"\n 5-Agendar Consulta."
+                                                        +"\n 6-Sair."));
             if(opcao==1){
                 animal1[cont1] = new Gato(); //objeto
                 animal1[cont1].setNome(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
@@ -95,6 +96,9 @@ public class App {
                 );
 
             }else if(opcao==5){
+                
+
+            }else if(opcao==6){
                 cadastrando = false;
                 JOptionPane.showMessageDialog(null,"Cadastro Efetuado");
             } else{

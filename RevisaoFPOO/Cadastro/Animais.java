@@ -1,6 +1,6 @@
 package RevisaoFPOO.Cadastro;
 
-public abstract class Animais {
+public abstract class Animais { //não posso criar um objeto e não exige os construtores
     //Atributos
     double peso;
     String proprietario;
