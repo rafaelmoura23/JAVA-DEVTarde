@@ -111,13 +111,21 @@ public class App {
                 JOptionPane.showMessageDialog(null,"Informe uma opção válida!");
             }
             } else if(opcaoInicio==2){
-
                 JOptionPane.showMessageDialog(null,"Bem vindo(a) a Central de Agendamento de Consultas");
                 agenda[contAgenda] = new AgendaConsulta();
+
+                agenda[contAgenda].setCliente(JOptionPane.showInputDialog("Informe a Data da Consulta:"));
+
+
                 agenda[contAgenda].setData(JOptionPane.showInputDialog("Informe a Data da Consulta:"));
                 agenda[contAgenda].setHorario(JOptionPane.showInputDialog("Informe o Horário da Consulta:"));
-                String dataHora = agenda[contAgenda].getData() + agenda[contAgenda].getHorario() ;
+                String dataHora = agenda[contAgenda].getData() + agenda[contAgenda].getHorario();
 
+                if(contAgenda==0){
+                    agenda[contAgenda].setCliente(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
+                    agenda[contAgenda].setVeterinario(JOptionPane.showInputDialog("Informe o Nome do Dr.Veterinário:"));
+                    JOptionPane.showMessageDialog(null, "Agendamento Efetuado com sucesso!");
+                } else{
                     for (int i = 0; i < contAgenda; i++) {
                         if(agenda[i].getAgendamento().equals(dataHora)){
                             JOptionPane.showMessageDialog(null, "Agenda Indisponível, escolha outro Agendamento!");
@@ -127,7 +135,7 @@ public class App {
                             JOptionPane.showMessageDialog(null, "Agendamento Efetuado com sucesso!");
                         }
                 }
-    
+                }
                 contAgenda++;
 
             } else if(opcaoInicio==3){
