@@ -1,0 +1,36 @@
+ String nomePet = JOptionPane.showInputDialog("Informe o nome do PET:");
+                boolean nomeOK = false;
+                
+                for (int i = 0; i < cont1; i++) {
+                    if(nomePet.equals(animal1[i].getNome())){
+                    JOptionPane.showMessageDialog(null,"Nome encontrado!");
+                    nomeOK=true;
+                    break;
+                    }
+                    }
+
+                for (int i = 0; i < cont2; i++) {
+                    if(nomePet.equals(animal2[i].getNome())){
+                    JOptionPane.showMessageDialog(null,"Nome encontrado!");
+                    nomeOK=true;
+                    break;
+                    }   
+                    }
+                
+
+                for (int i = 0; i < cont3; i++) {
+                    if(nomePet.equals(animal3[i].getNome())){
+                    JOptionPane.showMessageDialog(null,"Nome encontrado!");
+                    nomeOK=true;
+                    break;
+                    }   
+                    } 
+                
+
+                for (int i = 0; i < cont4; i++) {
+                    if(nomePet.equals(animal4[i].getNome())){
+                    JOptionPane.showMessageDialog(null,"Nome encontrado!");
+                    nomeOK=true;
+                    break;
+                    }   
+                    }   

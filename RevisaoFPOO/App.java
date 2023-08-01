@@ -45,8 +45,6 @@ public class App {
                 animal1[cont1].setnVidas(JOptionPane.showInputDialog("Digite o Número de Vidas do Animal:"));
                 animal1[cont1].setSalto(Integer.parseInt(JOptionPane.showInputDialog("Digite o tamanho do Salto do Animal:")));
 
-                cont1++;
-
                 JOptionPane.showMessageDialog(null, "Nome do Animal: "+animal1[cont1].getNome()
                 +"\n Espécie do Animal: " +animal1[cont1].getEspecie()
                 +"\n Proprietário: " + animal1[cont1].getProprietario()
@@ -64,7 +62,6 @@ public class App {
                 animal2[cont2].setPeso(200);
                 animal2[cont2].setTipo(JOptionPane.showInputDialog("Digite o Tipo de Cachorro:"));
 
-                cont2++;
 
                 JOptionPane.showMessageDialog(null, "Nome do Animal: "+animal2[cont2].getNome()
                 +"\n Espécie do Animal: " +animal2[cont2].getEspecie()
@@ -83,8 +80,6 @@ public class App {
                 animal3[cont3].setPeso(300);
                 animal3[cont3].setNomeSavana(JOptionPane.showInputDialog("Nome da Savana em que o Leão é Rei: "));
 
-                cont3++;
-
                 JOptionPane.showMessageDialog(null, "Nome do Animal: "+animal3[cont3].getNome()
                 +"\n Espécie do Animal: " +animal3[cont3].getEspecie()
                 +"\n Proprietário: " + animal3[cont3].getProprietario()
@@ -102,7 +97,6 @@ public class App {
                 animal4[cont4].setPeso(400);
                 animal4[cont4].setCorridasVencidas(cont4+9);
 
-                cont4++;
 
                 JOptionPane.showMessageDialog(null, "Nome do Animal: "+animal4[cont4].getNome()
                 +"\n Espécie do Animal: " +animal4[cont4].getEspecie()
@@ -121,46 +115,7 @@ public class App {
             } else if(opcaoInicio==2){
                 JOptionPane.showMessageDialog(null,"Bem vindo(a) a Central de Agendamento de Consultas");
                 
-                String nomePet = JOptionPane.showInputDialog("Informe o nome do PET:");
-                boolean nomeOK = false;
-                
-                for (int i = 0; i < cont1; i++) {
-                    if(nomePet.equals(animal1[i].getNome())){
-                    JOptionPane.showMessageDialog(null,"Nome encontrado!");
-                    nomeOK=true;
-                    break;
-                    }
-                    }
-
-                for (int i = 0; i < cont2; i++) {
-                    if(nomePet.equals(animal2[i].getNome())){
-                    JOptionPane.showMessageDialog(null,"Nome encontrado!");
-                    nomeOK=true;
-                    break;
-                    }   
-                    }
-
-                for (int i = 0; i < cont3; i++) {
-                    if(nomePet.equals(animal3[i].getNome())){
-                    JOptionPane.showMessageDialog(null,"Nome encontrado!");
-                    nomeOK=true;
-                    break;
-                    }   
-                    } 
-
-                for (int i = 0; i < cont4; i++) {
-                    if(nomePet.equals(animal4[i].getNome())){
-                    JOptionPane.showMessageDialog(null,"Nome encontrado!");
-                    nomeOK=true;
-                    break;
-                    }   
-                    }        
-
-                
                 agenda[contAgenda] = new AgendaConsulta();
-
-                agenda[contAgenda].setCliente(JOptionPane.showInputDialog("Informe a Data da Consulta:"));
-
 
                 agenda[contAgenda].setData(JOptionPane.showInputDialog("Informe a Data da Consulta:"));
                 agenda[contAgenda].setHorario(JOptionPane.showInputDialog("Informe o Horário da Consulta:"));
@@ -181,7 +136,7 @@ public class App {
                         }
                 }
                 }
-                contAgenda++;
+                contAgenda++; 
 
             } else if(opcaoInicio==3){
                 cadastrando = false;
