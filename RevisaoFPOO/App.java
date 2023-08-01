@@ -37,13 +37,13 @@ public class App {
                 +"\n 5-Sair."));
 
             if(opcaoDentro ==1){
-                animal1[cont1] = new Gato(); //objeto
+                animal1[cont1] = new Gato(); //construtor
                 animal1[cont1].setNome(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
                 animal1[cont1].setEspecie("Gato");
                 animal1[cont1].setProprietario(JOptionPane.showInputDialog("Digite o Nome do Proprietário:"));
-                animal1[cont1].setPeso(100);
+                animal1[cont1].setPeso(Double.parseDouble(JOptionPane.showInputDialog("Digite o Peso do Animal:")));
                 animal1[cont1].setnVidas(JOptionPane.showInputDialog("Digite o Número de Vidas do Animal:"));
-                animal1[cont1].setSalto(50);
+                animal1[cont1].setSalto(Integer.parseInt(JOptionPane.showInputDialog("Digite o tamanho do Salto do Animal:")));
 
                 JOptionPane.showMessageDialog(null, "Nome do Animal: "+animal1[cont1].getNome()
                 +"\n Espécie do Animal: " +animal1[cont1].getEspecie()
@@ -111,25 +111,23 @@ public class App {
                 JOptionPane.showMessageDialog(null,"Informe uma opção válida!");
             }
             } else if(opcaoInicio==2){
-                 boolean checkAgenda = true;
 
                 JOptionPane.showMessageDialog(null,"Bem vindo(a) a Central de Agendamento de Consultas");
                 agenda[contAgenda] = new AgendaConsulta();
                 agenda[contAgenda].setData(JOptionPane.showInputDialog("Informe a Data da Consulta:"));
                 agenda[contAgenda].setHorario(JOptionPane.showInputDialog("Informe o Horário da Consulta:"));
-
                 String dataHora = agenda[contAgenda].getData() + agenda[contAgenda].getHorario() ;
+
                     for (int i = 0; i < contAgenda; i++) {
-                        if(agenda[i].getAgendamento()==dataHora){
+                        if(agenda[i].getAgendamento().equals(dataHora)){
                             JOptionPane.showMessageDialog(null, "Agenda Indisponível, escolha outro Agendamento!");
                         }else{
                             agenda[contAgenda].setCliente(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
                             agenda[contAgenda].setVeterinario(JOptionPane.showInputDialog("Informe o Nome do Dr.Veterinário:"));
                             JOptionPane.showMessageDialog(null, "Agendamento Efetuado com sucesso!");
                         }
-
-                    
                 }
+    
                 contAgenda++;
 
             } else if(opcaoInicio==3){

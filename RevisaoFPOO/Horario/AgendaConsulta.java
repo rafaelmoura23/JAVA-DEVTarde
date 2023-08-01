@@ -1,6 +1,5 @@
 package RevisaoFPOO.Horario;
 
-import javax.swing.JOptionPane;
 
 public class AgendaConsulta {
     String data;
