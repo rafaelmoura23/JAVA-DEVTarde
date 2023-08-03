@@ -18,8 +18,8 @@ public class ExemploThrow {
         } else if(senha.equals(dataNasc)){
             throw new Exception("senha não pode se igual a data de nascimento");
         }
-    } catch(Exception erroTamanho){
-        JOptionPane.showMessageDialog(null, erroTamanho.getMessage());
+    } catch(Exception e){
+        JOptionPane.showMessageDialog(null, e.getMessage());
     }
     }
 }
