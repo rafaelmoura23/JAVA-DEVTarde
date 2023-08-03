@@ -99,9 +99,9 @@ public class App {
                 animal4[cont4].setNome(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
                 animal4[cont4].setEspecie("Lebre");
                 animal4[cont4].setProprietario(JOptionPane.showInputDialog("Digite o Nome do Proprietário:"));
-                animal4[cont4].setVelocidade(140);
+                animal4[cont4].setVelocidade(Integer.parseInt(JOptionPane.showInputDialog("Digite a Velocidade do Animal:")));;
                 animal4[cont4].setPeso(400);
-                animal4[cont4].setCorridasVencidas(cont4+9);
+                animal4[cont4].setCorridasVencidas(Integer.parseInt(JOptionPane.showInputDialog("Digite o n° de corridas vencidas: :")));;
 
 
                 JOptionPane.showMessageDialog(null, "Nome do Animal: "+animal4[cont4].getNome()
@@ -142,9 +142,10 @@ public class App {
                             agenda[contAgenda].setVeterinario(JOptionPane.showInputDialog("Informe o Nome do Dr.Veterinário:"));
                             JOptionPane.showMessageDialog(null, "Agendamento Efetuado com sucesso!");
                         }
+                        contAgenda++; 
                 }
                 }
-                contAgenda++; 
+                
 
             } else if(opcaoInicio==3){
                 cadastrando = false;

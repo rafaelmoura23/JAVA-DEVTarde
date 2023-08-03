@@ -33,4 +33,22 @@
                     nomeOK=true;
                     break;
                     }   
-                    }   
+                    }  
+                if(nome) {
+                    boolean registrarAgendamento=true;
+                    while(registrar Agendamento){
+                        String dataAgenda = informe a data do agendamento
+                    String horaAgenda = informe a hora do agendamento
+                    for(int i = 0; i < contAgenda; i++)
+                    if(agenda[i].getAgendamento.equals(dataAgenda+horaAgenda)){
+                        //já existe um horário agendado
+                        JOptionPane.showMessageDialog(null,"Horário Indisponível, tente outra Data!");
+                        break;
+                        else{
+                            //realizar o Agendamento
+                            agenda[contAgenda] = new AgendaConsulta(horaAgenda, dataAgenda);
+                            contAgenda++;
+                        }
+                    }
+                    }
+                }
