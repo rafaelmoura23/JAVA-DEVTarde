@@ -2,7 +2,6 @@ package RevisaoFPOO;
 
 import javax.swing.JOptionPane;
 import RevisaoFPOO.Cadastro.Gato;
-import RevisaoFPOO.Cadastro.Animais;
 import RevisaoFPOO.Cadastro.Cachorro;
 import RevisaoFPOO.Cadastro.Leao;
 import RevisaoFPOO.Cadastro.Lebre;
@@ -137,16 +136,16 @@ public class App {
                     for (int i = 0; i < contAgenda; i++) {
                         if(agenda[i].getAgendamento().equals(dataHora)){
                             JOptionPane.showMessageDialog(null, "Agenda Indisponível, escolha outra Data!");
+                            break;
                         }else{
                             agenda[contAgenda].setCliente(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
                             agenda[contAgenda].setVeterinario(JOptionPane.showInputDialog("Informe o Nome do Dr.Veterinário:"));
                             JOptionPane.showMessageDialog(null, "Agendamento Efetuado com sucesso!");
                         }
-                        contAgenda++; 
                 }
                 }
+                contAgenda++; 
                 
-
             } else if(opcaoInicio==3){
                 cadastrando = false;
                 JOptionPane.showMessageDialog(null,"Até Breve!");
