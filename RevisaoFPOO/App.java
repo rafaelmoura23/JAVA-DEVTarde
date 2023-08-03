@@ -53,6 +53,8 @@ public class App {
                 +"\n Saltos: " + animal1[cont1].getSalto()
                 );
 
+                cont1++;
+
             }else if(opcaoDentro==2){
                 animal2[cont2] = new Cachorro();
                 animal2[cont2].setNome(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
@@ -71,10 +73,12 @@ public class App {
                 +"\n Tipo de Cachorro: " + animal2[cont2].getTipo()
                 );
 
+                cont2++;
+
             } else if(opcaoDentro==3){
                 animal3[cont3] = new Leao();
                 animal3[cont3].setNome(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
-                animal3[cont3].setEspecie("Cachorro");
+                animal3[cont3].setEspecie("Leão");
                 animal3[cont3].setProprietario(JOptionPane.showInputDialog("Digite o Nome do Proprietário:"));
                 animal3[cont3].setAlmoco(JOptionPane.showInputDialog("Digite o Almoço do Leão:"));
                 animal3[cont3].setPeso(300);
@@ -88,10 +92,12 @@ public class App {
                 +"\n Nome da Savana: " + animal3[cont3].getNomeSavana()
                 );
 
+                cont3++;
+
             }else if(opcaoDentro==4){
                 animal4[cont4] = new Lebre();
                 animal4[cont4].setNome(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
-                animal4[cont4].setEspecie("Cachorro");
+                animal4[cont4].setEspecie("Lebre");
                 animal4[cont4].setProprietario(JOptionPane.showInputDialog("Digite o Nome do Proprietário:"));
                 animal4[cont4].setVelocidade(140);
                 animal4[cont4].setPeso(400);
@@ -105,6 +111,8 @@ public class App {
                 +"\n Velocidade: " + animal4[cont4].getVelocidade() +" Km/h"
                 +"\n Corridas Vencidas: " + animal4[cont4].getCorridasVencidas()
                 );
+
+                cont4++;
 
             }else if(opcaoDentro==5){
                 cadastrando = false;
@@ -128,7 +136,7 @@ public class App {
                 } else{
                     for (int i = 0; i < contAgenda; i++) {
                         if(agenda[i].getAgendamento().equals(dataHora)){
-                            JOptionPane.showMessageDialog(null, "Agenda Indisponível, escolha outro Agendamento!");
+                            JOptionPane.showMessageDialog(null, "Agenda Indisponível, escolha outra Data!");
                         }else{
                             agenda[contAgenda].setCliente(JOptionPane.showInputDialog("Digite o Nome do Animal:"));
                             agenda[contAgenda].setVeterinario(JOptionPane.showInputDialog("Informe o Nome do Dr.Veterinário:"));

@@ -17,4 +17,7 @@ public class Lebre extends Animais {
     public void setCorridasVencidas(int corridasVencidas) {
         this.corridasVencidas = corridasVencidas;
     }
+
+
+
 }
