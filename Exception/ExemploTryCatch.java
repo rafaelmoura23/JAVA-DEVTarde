@@ -9,7 +9,9 @@ public class ExemploTryCatch {
         boolean calcular = true;
         int n1=0,n2=0;
         while(calcular){
-        try{
+            int calculadora = Integer.parseInt(JOptionPane.showInputDialog(null, "Escolha uma Operação \n 1-Adição \n 2-Subtração \n 3-Multiplicação \n 4-Divisão"));
+            if(calculadora==1){
+                try{
         //recebendo os dados
         boolean n1ok = true;
         while(n1ok){
@@ -39,6 +41,14 @@ public class ExemploTryCatch {
         }catch(Exception erro1){
             JOptionPane.showMessageDialog(null, "Erro - valor digitado não é inteiro");
             }
+        } else if(calculadora==2){
+
+        } else if(calculadora==3){
+
+        } else if(calculadora==4){
+            
         }
-    }
+    } 
+            }
+
 }
