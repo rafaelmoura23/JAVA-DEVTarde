@@ -28,5 +28,4 @@ public class ExemploArrayList {
         //imprimindo a lista vazia
         System.out.println(carros);
     }
-    
 }
