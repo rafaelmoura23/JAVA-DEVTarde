@@ -1,6 +1,6 @@
 package Colecoes;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class ExemploArrayList {
     ArrayList <String> carros = new ArrayList<>();
@@ -13,6 +13,8 @@ public class ExemploArrayList {
         carros.add("Monza");
         //imprimindo lista completa
         System.out.println(carros);
+        //ordenando a lista(.sort(Collections))
+        Collections.sort(carros);
         //percorrerendo a lista(for)
         for (int i = 0; i < carros.size(); i++) {
             System.out.println(carros.get(i));
@@ -21,7 +23,6 @@ public class ExemploArrayList {
         for (String s : carros) {
             System.out.println(s);
         }
-
         //limpando os elementos
         carros.clear();
         //imprimindo a lista vazia
