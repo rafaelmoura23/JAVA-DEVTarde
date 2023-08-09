@@ -3,13 +3,23 @@ package Colecoes;
 import java.util.ArrayList;
 
 public class ExemploArrayList {
+    ArrayList <String> carros = new ArrayList<>();
     public void teste(){
-        ArrayList <String> carros = new ArrayList<>();
+        //adicionando elementos
         carros.add("Fusca");
         carros.add("Brasília");
         carros.add("Chevette");
         carros.add("Monza");
         carros.add("Monza");
+        //imprimindo lista completa
+        System.out.println(carros);
+        //percorrerendo a lista(for)
+        for (int i = 0; i < carros.size(); i++) {
+            System.out.println(carros.get(i));
+        }
+        //limpando os elementos
+        carros.clear();
+        //imprimindo a lista vazia
         System.out.println(carros);
     }
     
