@@ -17,6 +17,11 @@ public class ExemploArrayList {
         for (int i = 0; i < carros.size(); i++) {
             System.out.println(carros.get(i));
         }
+        //percorrrendo a lista com For-each
+        for (String s : carros) {
+            System.out.println(s);
+        }
+
         //limpando os elementos
         carros.clear();
         //imprimindo a lista vazia
