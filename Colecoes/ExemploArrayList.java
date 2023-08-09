@@ -15,6 +15,9 @@ public class ExemploArrayList {
         System.out.println(carros);
         //ordenando a lista(.sort(Collections))
         Collections.sort(carros);
+        System.out.println(carros);
+        Collections.reverse(carros); //ordenação reversa
+        System.out.println(carros);
         //percorrerendo a lista(for)
         for (int i = 0; i < carros.size(); i++) {
             System.out.println(carros.get(i));
