@@ -6,6 +6,8 @@ public class App {
         //obj1.teste();
         //obj1.exercicio1();
         ExemploLinkedList obj2 = new ExemploLinkedList();
-        obj2.teste();
+        //obj2.teste();
+        ExemploHashMap obj3 = new ExemploHashMap();
+        obj3.teste();
     }
 }

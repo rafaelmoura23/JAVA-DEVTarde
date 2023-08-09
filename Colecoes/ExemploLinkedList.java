@@ -17,7 +17,7 @@ public class ExemploLinkedList {
         //remove o último nome
         pessoas.removeLast();
         //imprimi a lista
-        System.out.println(pessoas + " - removido o ultimo nome (joão)");
+        System.out.println(pessoas + " - removido o último nome (joão)");
     }
     
 }
