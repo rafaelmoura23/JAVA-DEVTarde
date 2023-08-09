@@ -3,6 +3,8 @@ package Colecoes;
 import java.lang.reflect.Array;
 import java.util.*;
 
+import javax.swing.JOptionPane;
+
 public class ExemploArrayList {
     ArrayList <String> carros = new ArrayList<>();
     public void teste(){
@@ -50,5 +52,8 @@ public class ExemploArrayList {
         Collections.sort(numbers);
         //imprimindo a lista ordenada
         System.out.println(numbers);
+        //somando
+        int sum = numbers.get(0) + numbers.get(1);
+        JOptionPane.showMessageDialog(null,sum);;
     }
 }
