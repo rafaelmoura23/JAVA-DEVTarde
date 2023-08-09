@@ -9,5 +9,6 @@ public class App {
         //obj2.teste();
         ExemploHashMap obj3 = new ExemploHashMap();
         obj3.teste();
+        obj3.exercicio1();
     }
 }
