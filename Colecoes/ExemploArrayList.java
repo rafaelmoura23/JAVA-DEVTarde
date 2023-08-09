@@ -1,5 +1,6 @@
 package Colecoes;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class ExemploArrayList {
@@ -30,5 +31,24 @@ public class ExemploArrayList {
         carros.clear();
         //imprimindo a lista vazia
         System.out.println(carros);
+    }
+
+    public void exercicio1(){
+        //criar um arraylist de números inteiros
+        //escrever 5 números aleatórios - ordenar e imprimir
+        Random rd = new Random();
+        ArrayList <Integer> numbers = new ArrayList<>();
+        //criando os numeros aleatorios
+        numbers.add(rd.nextInt(100));
+        numbers.add(rd.nextInt(100));
+        numbers.add(rd.nextInt(100));
+        numbers.add(rd.nextInt(100));
+        numbers.add(rd.nextInt(100));
+        // imprimindo os numeros
+        System.out.println(numbers);
+        //ordenando a lista
+        Collections.sort(numbers);
+        //imprimindo a lista ordenada
+        System.out.println(numbers);
     }
 }
