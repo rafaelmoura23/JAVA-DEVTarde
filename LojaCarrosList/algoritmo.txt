@@ -1,0 +1,8 @@
+cadastrar um carro
+(marca, modelo, ano, cor)
+
+no app:
+//cadastrar
+//consultar
+//listar- mostrar todos que estão cadastrados
+//apagar
