@@ -1,6 +1,5 @@
 package Colecoes;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 import javax.swing.JOptionPane;
