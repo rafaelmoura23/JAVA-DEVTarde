@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 public class App {
     public static void main(String[] args) {
         List <Carros> listaCarros = new ArrayList<>();
+        String listar = "";
         //lista - com o tipo sendo uma classe
         //cadastrar
         //consultar
@@ -25,15 +26,23 @@ public class App {
                 c1.setModelo(JOptionPane.showInputDialog("Informe o modelo do carro:"));
                 c1.setCor(JOptionPane.showInputDialog("Informe a cor do carro:"));
                 c1.setAno(JOptionPane.showInputDialog("Informe o ano do carro:"));
-                
-            } else if(opcao==2){
 
+                listaCarros.add(c1); //adicionado o carro no arrayList
+
+            } else if(opcao==2){
+                for (Carros carros : listaCarros) {
+                    listar+=carros.getMarca() + " | "+carros.getModelo() + " | " + carros.getCor() + " | " + carros.getAno() + "\n";
+                    JOptionPane.showMessageDialog(null, listar);
+                    listar="";
+                }
             } else if(opcao==3){
 
             } else if(opcao==4){
 
             } else if(opcao==5){
 
+            } else{
+                lojaAberta = false;
             }
 
         }
