@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 public class App {
     public static void main(String[] args) {
         List <Carros> listaCarros = new ArrayList<>();
-        String listar = "";
+        ArrayList<String> listar = new ArrayList<>();
         //lista - com o tipo sendo uma classe
         //cadastrar
         //consultar
@@ -30,19 +30,19 @@ public class App {
 
             } else if(opcao==2){
                 for (Carros carros : listaCarros) {
-                    listar+=carros.getMarca() + " | "+carros.getModelo() + " | " + carros.getCor() + " | " + carros.getAno();
+                    listar.add(carros.getMarca() + " | "+carros.getModelo() + " | " + carros.getCor() + " | " + carros.getAno());
+                    //JOptionPane.showMessageDialog(null, listar);
                     JOptionPane.showMessageDialog(null, listar);
-                    listar = "";
                 }
+                listar.clear();
             } else if(opcao==3){
-                String consultar = JOptionPane.showInputDialog("Informe o cadastro que deseja consultar");
-                if(consultar.equals(listar)){
-                    listaCarros.clear();
-                }
+                String consultar = JOptionPane.showInputDialog("Informe o cadastro que deseja consultar(marca)");
+                
+                
 
             } else if(opcao==4){
-                JOptionPane.showInputDialog("Informe o cadastro que deseja excluir");
-
+                String excluir = JOptionPane.showInputDialog("Informe o cadastro que deseja excluir (Marca)");
+               
             } else if(opcao==5){
                 lojaAberta = false;
             } else{
