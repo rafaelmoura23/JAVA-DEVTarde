@@ -30,19 +30,19 @@ public class App {
 
             } else if(opcao==2){
                 for (Carros carros : listaCarros) {
-                    listar.add(carros.getMarca() + " | "+carros.getModelo() + " | " + carros.getCor() + " | " + carros.getAno());
-                    //JOptionPane.showMessageDialog(null, listar);
-                    JOptionPane.showMessageDialog(null, listar);
+                    listar.add(carros.getMarca() + " | "+carros.getModelo() + " | " + carros.getCor() + " | " + carros.getAno() + "\n");
                 }
+                JOptionPane.showMessageDialog(null, listar);
                 listar.clear();
             } else if(opcao==3){
-                String consultar = JOptionPane.showInputDialog("Informe o cadastro que deseja consultar(marca)");
-                
-                
-
+                int indexCarros = Integer.parseInt(JOptionPane.showInputDialog("Informe o índice do carroque deseja consultar"));
+                JOptionPane.showMessageDialog(null,listaCarros.get(indexCarros).getMarca() + "\n" 
+                                                                    +listaCarros.get(indexCarros).getModelo() + "\n"
+                                                                    +listaCarros.get(indexCarros).getCor() + "\n"
+                                                                    +listaCarros.get(indexCarros).getAno());
             } else if(opcao==4){
-                String excluir = JOptionPane.showInputDialog("Informe o cadastro que deseja excluir (Marca)");
-               
+                int indexCarros = Integer.parseInt(JOptionPane.showInputDialog("Informe o índice que deseja excluir"));
+                listaCarros.remove(indexCarros);
             } else if(opcao==5){
                 lojaAberta = false;
             } else{
