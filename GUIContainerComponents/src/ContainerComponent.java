@@ -1,5 +1,3 @@
-//import java.awt.event.ActionEvent;
-//import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class ContainerComponent extends JFrame{
@@ -14,7 +12,7 @@ public class ContainerComponent extends JFrame{
         painel1.add(campo1);
         JButton botao1 = new JButton("Enviar");
         painel1.add(botao1);
-        //usar um listener para o botao
+        //usar um listener para excutar uma ação ao clicar em um botão
         botao1.addActionListener(e ->{
             int quant = Integer.parseInt(campo1.getText()); //receber a quantidade digitada
             for (int i = 1; i <= quant; i++) { //criação dos botões
