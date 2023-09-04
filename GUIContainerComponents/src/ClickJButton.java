@@ -16,13 +16,12 @@ public class ClickJButton extends JFrame{
         painel.add(texto1);
         // evento Listener para contar os clicks
         botao1.addActionListener(e ->{
-        
         cont++;
         painel.add(new JButton((""+cont)));
         texto1.setText(("nº de cliques: " + " " + cont));
-
         this.pack();
         });
+
         this.getContentPane().add(painel); //adicionar depois de ter adicionado todos os elementos ao painel
         //set do frame
         this.setDefaultCloseOperation(2);
