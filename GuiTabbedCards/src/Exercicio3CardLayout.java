@@ -22,20 +22,62 @@ public class Exercicio3CardLayout extends JFrame {
         JButton bPrev2 = new JButton("Previous");
         JButton bPrev3 = new JButton("Previous");
 
-        //criando os Cards para adicionar o mainPanel
-        JPanel card1 = new JPanel();
-        card1.add(new JLabel("Página Inicial"));
-        card1.add(bNext1);
-        //card1.add(bPrev1);
+        //criando o CARD1 para adicionar o mainPanel
+        JPanel card1 = new JPanel(new BorderLayout());
+        JPanel card1Initial = new JPanel(new BorderLayout());
+        card1.add(card1Initial);
 
-        JPanel card2 = new JPanel();
-        card2.add(new JLabel("Página de Login"));
-        card2.add(bNext2);
+        //Labels
+        JLabel initialPage = new JLabel("STORE OF STORE's");
+
+        //adicionando os componentes ao card1
+        card1Initial.add(bNext1, BorderLayout.EAST);
+        card1Initial.add(bPrev1, BorderLayout.WEST);
+        card1Initial.add(initialPage, BorderLayout.NORTH);
+
+
+
+        //criando o CARD2 para adicionar o mainPanel
+        JPanel card2 = new JPanel(new BorderLayout());
+        JPanel card2Login = new JPanel(new GridLayout(2, 2));
+
+        card2.add(new JLabel("PÁGINA DE LOGIN"), BorderLayout.NORTH);
+
+        //labels
+        JLabel labelUser = new JLabel("User: ");
+        JLabel labelPass = new JLabel("Password: ");
+
+        //texts
+        JTextField textUser = new JTextField(10);
+        JTextField textPass = new JTextField(10);
+
+        //buttons
+        JButton buttonLog = new JButton("Login");
+
+        //adicionando os componentes ao card2
+        card2.add(bNext2, BorderLayout.EAST);
         card2.add(bPrev2);
 
+        card2Login.add(labelUser);
+        card2Login.add(labelPass);
+        card2Login.add(textPass);
+        card2Login.add(textUser);
+
+
+        card2.add(card2Login, BorderLayout.CENTER);
+        card2.add(bPrev2,BorderLayout.WEST);
+        card2.add(bNext2,BorderLayout.EAST);
+
+
+
+
+
+
+
+        //criando o CARD3 para adicionar o mainPanel
         JPanel card3 = new JPanel();
-        card3.add(new JLabel("Página Cadastro"));
-        //card3.add(bNext3);
+        card3.add(new JLabel("PÁGINA DE CADASTRO"));
+        card3.add(bNext3);
         card3.add(bPrev3);
 
 
@@ -49,6 +91,7 @@ public class Exercicio3CardLayout extends JFrame {
         this.setDefaultCloseOperation(2);
         this.setBounds(100, 100, 300, 300);
         this.setVisible(true);
+        this.pack();
 
         //criando ActionListener para os botões
         bNext1.addActionListener(e->{
