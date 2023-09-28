@@ -16,32 +16,33 @@ public class Exercicio3CardLayout extends JFrame {
         //criando os botões
         JButton bNext1 = new JButton("Next");
         JButton bNext2 = new JButton("Next");
-        JButton bNext3 = new JButton("Next");
+        JButton bNext3 = new JButton("🏠");
 
         JButton bPrev1 = new JButton("Previous");
-        JButton bPrev2 = new JButton("Previous");
+        JButton bPrev2 = new JButton("🏠");
         JButton bPrev3 = new JButton("Previous");
 
         //criando o CARD1 para adicionar o mainPanel
-        JPanel card1 = new JPanel(new BorderLayout());
+        JPanel card1 = new JPanel();
         JPanel card1Initial = new JPanel(new BorderLayout());
         card1.add(card1Initial);
 
         //Labels
-        JLabel initialPage = new JLabel("STORE OF STORE's");
+        JLabel title = new JLabel("WELCOME TO MY JAVA APPLICATION!");
 
         //adicionando os componentes ao card1
         card1Initial.add(bNext1, BorderLayout.EAST);
         card1Initial.add(bPrev1, BorderLayout.WEST);
-        card1Initial.add(initialPage, BorderLayout.NORTH);
+        card1Initial.add(title, BorderLayout.NORTH);
 
 
 
         //criando o CARD2 para adicionar o mainPanel
-        JPanel card2 = new JPanel(new BorderLayout());
+        JPanel card2 = new JPanel();
+        JPanel card2Main = new JPanel(new BorderLayout());
         JPanel card2Login = new JPanel(new GridLayout(2, 2));
 
-        card2.add(new JLabel("PÁGINA DE LOGIN"), BorderLayout.NORTH);
+        JLabel title2 = new JLabel("WELCOME TO THE LOGIN PAGE!");
 
         //labels
         JLabel labelUser = new JLabel("User: ");
@@ -55,19 +56,20 @@ public class Exercicio3CardLayout extends JFrame {
         JButton buttonLog = new JButton("Login");
 
         //adicionando os componentes ao card2
-        card2.add(bNext2, BorderLayout.EAST);
-        card2.add(bPrev2);
 
+       
         card2Login.add(labelUser);
+        card2Login.add(textUser);
         card2Login.add(labelPass);
         card2Login.add(textPass);
-        card2Login.add(textUser);
 
 
-        card2.add(card2Login, BorderLayout.CENTER);
-        card2.add(bPrev2,BorderLayout.WEST);
-        card2.add(bNext2,BorderLayout.EAST);
-
+        card2.add(card2Main);
+        card2Main.add(title2, BorderLayout.NORTH);
+        card2Main.add(card2Login, BorderLayout.CENTER);
+        card2Main.add(bPrev2,BorderLayout.WEST);
+        card2Main.add(bNext2,BorderLayout.EAST);
+        card2Main.add(buttonLog,BorderLayout.SOUTH);
 
 
 
@@ -76,9 +78,24 @@ public class Exercicio3CardLayout extends JFrame {
 
         //criando o CARD3 para adicionar o mainPanel
         JPanel card3 = new JPanel();
-        card3.add(new JLabel("PÁGINA DE CADASTRO"));
+        JPanel cardMain = new JPanel(new BorderLayout());
+        JPanel card3Cad = new JPanel(new GridLayout(3,3));
+
+
+        JLabel title3 =  new JLabel("PÁGINA DE CADASTRO");
+        
+        
         card3.add(bNext3);
         card3.add(bPrev3);
+
+
+
+
+
+
+
+
+
 
 
         //adicionando os cards ao mainPanel
@@ -93,7 +110,7 @@ public class Exercicio3CardLayout extends JFrame {
         this.setVisible(true);
         this.pack();
 
-        //criando ActionListener para os botões
+        //criando os ActionListener para os botões
         bNext1.addActionListener(e->{
             cl.next(mainPanel);
         });
