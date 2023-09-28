@@ -4,6 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class Exercicio5CardLayout extends JFrame {
     public Exercicio5CardLayout() {
@@ -21,6 +22,11 @@ public class Exercicio5CardLayout extends JFrame {
         //card2 - Primeira Pergunta
         JPanel card2 = new JPanel();
         card2.add(new JLabel("Quem foi Campeão da Copa de 70"));
+        JTextField resposta1 = new JTextField(20);
+        card2.add(resposta1);
+        JButton but2 = new JButton("Avançar");
+        
+
 
 
 
