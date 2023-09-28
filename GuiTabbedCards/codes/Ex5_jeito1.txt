@@ -1,0 +1,83 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class Exercicio5CardLayout extends JFrame{
+    public Exercicio5CardLayout() {
+        super("Exercício 5");
+
+        JPanel mainPanel = new JPanel();
+
+        CardLayout cl = new CardLayout();
+        mainPanel.setLayout(cl);
+
+        JPanel card1 = new JPanel();
+        JPanel card1Initial = new JPanel(new BorderLayout());
+
+        JLabel title = new JLabel("BEM-VINDO AO JOGO DE PERGUNTAS E RESPOSTAS");
+        title.setFont(new Font("Arial", Font.BOLD, 20));
+        JButton next = new JButton("COMEÇAR");
+        next.setFont(new Font("Arial", Font.BOLD, 20));
+
+        next.addActionListener(e->{
+            cl.next(mainPanel);
+        });
+
+        card1.add(card1Initial);
+        card1Initial.add(title, BorderLayout.NORTH);
+        card1Initial.add(next, BorderLayout.CENTER);
+
+
+        JPanel card2 = new JPanel();
+        JPanel card2Initial = new JPanel(new BorderLayout());
+
+        JLabel firstQuestionL = new JLabel("Quanto mundiais o Palmeiras tem?");
+        JTextField firstQuestionT = new JTextField(10);
+        JButton firstButton = new JButton("✔");
+
+        card2.add(card2Initial);
+        card2Initial.add(firstQuestionL, BorderLayout.NORTH);
+        card2Initial.add(firstQuestionT, BorderLayout.CENTER);
+        card2Initial.add(firstButton, BorderLayout.SOUTH);
+
+        
+        firstButton.addActionListener(e->{
+            cl.next(mainPanel);
+        });
+
+
+        JPanel card3 = new JPanel();
+        JPanel card3Initial = new JPanel(new BorderLayout());
+
+        JLabel secondQuestionL = new JLabel("Qual o seu nome?");
+        JTextField secondQuestionT = new JTextField(10);
+        JButton secondButton = new JButton("✔");
+
+        card3.add(card3Initial);
+        card3Initial.add(secondQuestionL, BorderLayout.NORTH);
+        card3Initial.add(secondQuestionT, BorderLayout.CENTER);
+        card3Initial.add(secondButton, BorderLayout.SOUTH);
+
+        secondButton.addActionListener(e->{
+            cl.next(mainPanel);
+        });
+
+
+
+        // adding the card's to main panel
+        mainPanel.add(card1);
+        mainPanel.add(card2);
+
+        //set do Frame
+        this.add(mainPanel);
+        this.setDefaultCloseOperation(2);
+        this.setBounds(100, 100, 300, 300);
+        this.setVisible(true);
+        this.pack();
+
+
+
+    
+
+        
+    }
+}
