@@ -75,18 +75,44 @@ public class Exercicio3CardLayout extends JFrame {
 
 
 
-
         //criando o CARD3 para adicionar o mainPanel
         JPanel card3 = new JPanel();
-        JPanel cardMain = new JPanel(new BorderLayout());
-        JPanel card3Cad = new JPanel(new GridLayout(3,3));
+        JPanel card3Main = new JPanel(new BorderLayout());
+        JPanel card3Cad = new JPanel(new GridLayout(4,4));
 
 
-        JLabel title3 =  new JLabel("PÁGINA DE CADASTRO");
+        JLabel title3 =  new JLabel("WELCOME TO THE REGISTRATION PAGE!");
+
+        JLabel name = new JLabel("Name: ");
+        JLabel user = new JLabel("User: ");
+        JLabel street = new JLabel("Street: ");
+        JLabel pass = new JLabel("Password: ");
+
+        JTextField nameText = new JTextField(10);
+        JTextField userText = new JTextField(10);
+        JTextField streetText = new JTextField(10);
+        JTextField passText = new JTextField(10);
+
         
         
         card3.add(bNext3);
         card3.add(bPrev3);
+
+        // card3.add(card2Main);
+        // card3.add(card3Cad);
+
+        // card3Cad.add(name);
+        // card3Cad.add(user);
+        // card3Cad.add(street);
+        // card3Cad.add(pass);
+
+        // card3Cad.add(nameText);
+        // card3Cad.add(userText);
+        // card3Cad.add(streetText);
+        // card3Cad.add(passText);
+
+        // card3Main.add(title);
+        // card3Main.add(card3Cad);
 
 
 
