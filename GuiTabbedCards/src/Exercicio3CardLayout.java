@@ -40,6 +40,7 @@ public class Exercicio3CardLayout extends JFrame {
         //criando o CARD2 para adicionar o mainPanel
         JPanel card2 = new JPanel();
         JPanel card2Main = new JPanel(new BorderLayout());
+        JPanel botoesLogin = new JPanel(new BorderLayout());
         JPanel card2Login = new JPanel(new GridLayout(2, 2));
 
         JLabel title2 = new JLabel("WELCOME TO THE LOGIN PAGE!");
@@ -65,11 +66,16 @@ public class Exercicio3CardLayout extends JFrame {
 
 
         card2.add(card2Main);
+        card2.add(botoesLogin);
+
         card2Main.add(title2, BorderLayout.NORTH);
         card2Main.add(card2Login, BorderLayout.CENTER);
-        card2Main.add(bPrev2,BorderLayout.WEST);
-        card2Main.add(bNext2,BorderLayout.EAST);
-        card2Main.add(buttonLog,BorderLayout.SOUTH);
+
+        botoesLogin.add(bPrev2,BorderLayout.WEST);
+        botoesLogin.add(bNext2,BorderLayout.EAST);
+        botoesLogin.add(buttonLog, BorderLayout.CENTER);
+
+        card2Main.add(botoesLogin, BorderLayout.SOUTH);
 
 
 
@@ -78,41 +84,49 @@ public class Exercicio3CardLayout extends JFrame {
         //criando o CARD3 para adicionar o mainPanel
         JPanel card3 = new JPanel();
         JPanel card3Main = new JPanel(new BorderLayout());
-        JPanel card3Cad = new JPanel(new GridLayout(4,4));
+        JPanel botoes = new JPanel(new BorderLayout());
+        JPanel card3Cad = new JPanel(new GridLayout(2,2));
 
 
         JLabel title3 =  new JLabel("WELCOME TO THE REGISTRATION PAGE!");
 
         JLabel name = new JLabel("Name: ");
-        JLabel user = new JLabel("User: ");
-        JLabel street = new JLabel("Street: ");
-        JLabel pass = new JLabel("Password: ");
-
         JTextField nameText = new JTextField(10);
+
+        JLabel user = new JLabel("User: ");
         JTextField userText = new JTextField(10);
+
+        JLabel street = new JLabel("Street: ");
         JTextField streetText = new JTextField(10);
+
+        JLabel pass = new JLabel("Password: ");
         JTextField passText = new JTextField(10);
 
-        
-        
-        card3.add(bNext3);
-        card3.add(bPrev3);
+        JButton buttonCad = new JButton("Cadastro");
 
-        // card3.add(card2Main);
-        // card3.add(card3Cad);
 
-        // card3Cad.add(name);
-        // card3Cad.add(user);
-        // card3Cad.add(street);
-        // card3Cad.add(pass);
+        card3.add(card3Main);
+        card3.add(card3Cad);
+        card3.add(botoes);
 
-        // card3Cad.add(nameText);
-        // card3Cad.add(userText);
-        // card3Cad.add(streetText);
-        // card3Cad.add(passText);
+        card3Main.add(title3, BorderLayout.NORTH);
+        card3Main.add(card3Cad, BorderLayout.CENTER);
+        card3Main.add(botoes, BorderLayout.SOUTH);
 
-        // card3Main.add(title);
-        // card3Main.add(card3Cad);
+        botoes.add(bPrev3, BorderLayout.WEST);
+        botoes.add(bNext3, BorderLayout.EAST);
+        botoes.add(buttonCad, BorderLayout.CENTER);
+
+        card3Cad.add(name);
+        card3Cad.add(user);
+        card3Cad.add(street);
+        card3Cad.add(pass);
+
+        card3Cad.add(nameText);
+        card3Cad.add(userText);
+        card3Cad.add(streetText);
+        card3Cad.add(passText);
+
 
 
 
