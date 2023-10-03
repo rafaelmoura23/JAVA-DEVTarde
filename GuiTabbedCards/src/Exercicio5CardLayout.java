@@ -1,34 +1,179 @@
-import java.awt.CardLayout;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
-public class Exercicio5CardLayout extends JFrame {
+public class Exercicio5CardLayout extends JFrame{
     public Exercicio5CardLayout() {
-        super("Exercicio 5- Quiz");
-        //Criar um Painel Principal -> cardLayout
+        super("Exercício 5");
+
+        JPanel mainPanel = new JPanel();
+
         CardLayout cl = new CardLayout();
-        JPanel mainCard = new JPanel(cl);// set do layout
-        this.add(mainCard);
-        //criar os Cards
-        // card1 - Tela Inicial
+        mainPanel.setLayout(cl);
+
         JPanel card1 = new JPanel();
-        card1.add(new JLabel("Jogo Quiz - Seja bem Vindo"));
-        JButton but1 = new JButton("Start");//botão da card1
-        mainCard.add(card1,"Start");
-        //card2 - Primeira Pergunta
+        JPanel card1Initial = new JPanel(new BorderLayout());
+
+        JLabel title = new JLabel("BEM-VINDO AO JOGO DE PERGUNTAS E RESPOSTAS");
+        title.setFont(new Font("Arial", Font.BOLD, 20));
+        JButton next = new JButton("COMEÇAR");
+        next.setFont(new Font("Arial", Font.BOLD, 20));
+
+        next.addActionListener(e->{
+            cl.next(mainPanel);
+        });
+
+        card1.add(card1Initial);
+        card1Initial.add(title, BorderLayout.NORTH);
+        card1Initial.add(next, BorderLayout.CENTER);
+
+
         JPanel card2 = new JPanel();
-        card2.add(new JLabel("Quem foi Campeão da Copa de 70"));
-        JTextField resposta1 = new JTextField(20);
-        card2.add(resposta1);
-        JButton but2 = new JButton("Avançar");
+        JPanel card2Initial = new JPanel(new BorderLayout());
+
+        JLabel firstQuestionL = new JLabel("Quanto mundiais o Palmeiras tem?");
+        JTextField firstQuestionT = new JTextField(10);
+        JButton firstButton = new JButton("✔");
+
+        card2.add(card2Initial);
+        card2Initial.add(firstQuestionL, BorderLayout.NORTH);
+        card2Initial.add(firstQuestionT, BorderLayout.CENTER);
+        card2Initial.add(firstButton, BorderLayout.SOUTH);
+
+        
+        firstButton.addActionListener(e->{
+            cl.next(mainPanel);
+        });
+
+
+        JPanel card3 = new JPanel();
+        JPanel card3Initial = new JPanel(new BorderLayout());
+
+        JLabel secondQuestionL = new JLabel("Qual o Grande vencedor da copa de 70?");
+        JTextField secondQuestionT = new JTextField(10);
+        JButton secondButton = new JButton("✔");
+
+        card3.add(card3Initial);
+        card3Initial.add(secondQuestionL, BorderLayout.NORTH);
+        card3Initial.add(secondQuestionT, BorderLayout.CENTER);
+        card3Initial.add(secondButton, BorderLayout.SOUTH);
+
+        secondButton.addActionListener(e->{
+            cl.next(mainPanel);
+        });
+
+
+        JPanel card4 = new JPanel();
+        JPanel card4Initial = new JPanel(new BorderLayout());
+
+        JLabel thirdQuestionL = new JLabel("Quantas Sílabas tem a palavra PARALELEPÍPEDO?");
+        JTextField thirdQuestionT = new JTextField(10);
+        JButton thirdButton = new JButton("✔");
+
+        card4.add(card4Initial);
+        card4Initial.add(thirdQuestionL, BorderLayout.NORTH);
+        card4Initial.add(thirdQuestionT, BorderLayout.CENTER);
+        card4Initial.add(thirdButton, BorderLayout.SOUTH);
+
+        thirdButton.addActionListener(e->{
+            cl.next(mainPanel);
+        });
+
+        JPanel card5 = new JPanel();
+        JPanel card5Initial = new JPanel(new BorderLayout());
+
+        JLabel fourthQuestionL = new JLabel("Qual a cor do SOL?");
+        JTextField fourthQuestionT = new JTextField(10);
+        JButton fourthButton = new JButton("✔");
+
+        card5.add(card5Initial);
+        card5Initial.add(fourthQuestionL, BorderLayout.NORTH);
+        card5Initial.add(fourthQuestionT, BorderLayout.CENTER);
+        card5Initial.add(fourthButton, BorderLayout.SOUTH);
+
+        fourthButton.addActionListener(e->{
+            cl.next(mainPanel);
+        });
+
+        JPanel card6 = new JPanel();
+        JPanel card6Initial = new JPanel(new BorderLayout());
+
+        JLabel fifthQuestionL = new JLabel("Qual o tamanho da TERRA?");
+        JTextField fifthQuestionT = new JTextField(10);
+        JButton fifthButton = new JButton("✔");
+
+        card6.add(card6Initial);
+        card6Initial.add(fifthQuestionL, BorderLayout.NORTH);
+        card6Initial.add(fifthQuestionT, BorderLayout.CENTER);
+        card6Initial.add(fifthButton, BorderLayout.SOUTH);
+
+        fifthButton.addActionListener(e->{
+            cl.next(mainPanel);
+        });
+
+        
+        JPanel card7 = new JPanel();
+        JPanel card7Initial = new JPanel(new BorderLayout());
+        JLabel sixthQuestionL = new JLabel("PONTUAÇÃO TOTAL");
+        JTextField sixthQuestionT = new JTextField(10);
+        sixthQuestionT.setEditable(false);
+        JButton sixthButton = new JButton("✔");
+
+        card7.add(card7Initial);
+        card7Initial.add(sixthQuestionL, BorderLayout.NORTH);
+        card7Initial.add(sixthQuestionT, BorderLayout.CENTER);
+        card7Initial.add(sixthButton, BorderLayout.SOUTH);
+
+        sixthButton.addActionListener(e->{
+            cl.next(mainPanel);
+        });
+
+
+        sixthButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                try {
+                    // Obter os valores inseridos pelo usuário
+                    double question1 = Double.parseDouble(firstQuestionT.getText());
+                    double question2 = Double.parseDouble(secondQuestionT.getText());
+                    double question3 = Double.parseDouble(thirdQuestionT.getText());
+                    double question4 = Double.parseDouble(fourthQuestionT.getText());
+                    double question5 = Double.parseDouble(fifthQuestionT.getText());
+
+
+                    // Exibir o resultado no campo de resultado
+                   sixthQuestionT.setText(String.format());
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Por favor, insira números válidos.");
+                }
+            }
+        });
+
         
 
 
 
+        // adding the card's to main panel
+        mainPanel.add(card1);
+        mainPanel.add(card2);
+        mainPanel.add(card3);
+        mainPanel.add(card4);
+        mainPanel.add(card5);
+        mainPanel.add(card6);
+        mainPanel.add(card7);
 
+        //set do Frame
+        this.add(mainPanel);
+        this.setDefaultCloseOperation(2);
+        this.setBounds(100, 100, 300, 300);
+        this.setVisible(true);
+        this.pack();
+
+
+
+    
+
+        
     }
 }
