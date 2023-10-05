@@ -54,6 +54,7 @@ public class ExemploNomeSobrenome extends JFrame {
     }
     //criar a classe handler
     public class Handler implements ActionListener{
+        @Override
         public void actionPerformed(ActionEvent e){
             //evento 
             texto.setText(caixaNome.getText() + " " + caixaSobrenome.getText());
