@@ -75,9 +75,5 @@ public class Exercicio5CardLayout extends JFrame{
         botao4.addActionListener(e->{
             cl.first(mainP);
         });
-
-
-
-        
     }
 }
