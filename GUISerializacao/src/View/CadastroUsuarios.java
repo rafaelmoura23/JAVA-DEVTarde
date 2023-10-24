@@ -32,12 +32,6 @@ public class CadastroUsuarios extends JFrame {
 
     // construtor
     public CadastroUsuarios() {
-        // set do frame
-        setTitle("Cadastro de Usuários");
-        setSize(600, 300);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-
         // construir minha tabela
         tableModel = new DefaultTableModel();
         tableModel.addColumn("Nome");
@@ -71,5 +65,16 @@ public class CadastroUsuarios extends JFrame {
         setLayout(new BorderLayout());
         add(inputPanel, BorderLayout.NORTH);
         add(scrollPane, BorderLayout.CENTER);
+    }
+
+    public void run(){
+        pack();
+        setVisible(true);
+
+        // set do frame
+        setTitle("Cadastro de Usuários");
+        setSize(1000, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
     }
 }
