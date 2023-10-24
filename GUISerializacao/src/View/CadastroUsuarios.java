@@ -65,6 +65,9 @@ public class CadastroUsuarios extends JFrame {
         setLayout(new BorderLayout());
         add(inputPanel, BorderLayout.NORTH);
         add(scrollPane, BorderLayout.CENTER);
+
+        //tratamento de eventos
+        
     }
 
     public void run(){
