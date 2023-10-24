@@ -1,4 +1,8 @@
-public class Usuario {
+package Model;
+
+import java.io.Serializable;
+
+public class Usuario implements Serializable {
     //atributos
     private String nome;
     private int idade;
