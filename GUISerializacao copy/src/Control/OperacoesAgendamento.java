@@ -31,7 +31,7 @@ public class OperacoesAgendamento {
     public void atualizarAgenda(int linhaSelecionada, String data, String hora, String usuario, String description) {
         if (linhaSelecionada != -1) {
             Agenda agenda = new Agenda(data, hora, usuario, description);
-            agendas.set(linhaSelecionada, agenda);
+            agendas.set(linhaSelecionada, agenda); // altera a agenda a partir do índice
             atualizarTabela();
         }
     }

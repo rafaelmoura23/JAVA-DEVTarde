@@ -87,7 +87,6 @@ public class Agendamento extends JPanel {
         }
 
         // tratamento de eventos
-
         table.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent evt) {
