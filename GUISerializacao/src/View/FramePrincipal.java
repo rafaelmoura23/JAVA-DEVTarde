@@ -9,7 +9,7 @@ public class FramePrincipal extends JFrame {
         setDefaultCloseOperation(2);
         JTabbedPane abas = new JTabbedPane();
         abas.add("Cadastro de Usuários", new CadastroUsuarios());
-        //abas.add("Agendamentos", new Agendamento());
+        abas.add("Agendamentos", new Agendamento());
         add(abas);
     }
 
