@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -20,10 +19,8 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.event.MouseEvent;
 
 import Control.OperacoesAgendamento;
-import Control.OperacoesUsuario;
 import Control.Serializacao;
 import Model.Agenda;
-import Model.Usuario;
 
 
 public class Agendamento extends JPanel {
