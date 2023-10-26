@@ -6,6 +6,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.List;
 
+import Model.Agenda;
 import Model.Usuario;
 
 public class Serializacao {
