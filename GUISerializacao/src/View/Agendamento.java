@@ -82,12 +82,12 @@ public class Agendamento extends JPanel {
         add(inputPanel, BorderLayout.NORTH);
         add(scrollPane, BorderLayout.CENTER);
 
-        // criação do arquivo binário
-        // File arquivo = new File("dadosAgenda.txt");
-        // if (arquivo.exists()) {
-        //     agendas = Serializacao.deserializar("dadosAgenda.txt");
-        //     atualizarTabela();
-        // }
+        //criação do arquivo binário
+        File arquivoAgenda = new File("dadosAgenda.txt");
+        if (arquivoAgenda.exists()) {
+            agendas = Serializacao.deserializarAgenda("dadosAgenda.txt");
+            atualizarTabela();
+        }
 
         // tratamento de eventos
 
@@ -136,12 +136,12 @@ public class Agendamento extends JPanel {
                 operacoes.apagarTodosAgenda();
             }
         });
-        // salvarButton.addActionListener(new ActionListener() {
-        //     @Override
-        //     public void actionPerformed(ActionEvent e) {
-        //         operacoes.salvarAgendas();
-        //     }
-        // });
+        salvarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                operacoes.salvarAgendas();
+            }
+        });
     }
 
         private void atualizarTabela() {

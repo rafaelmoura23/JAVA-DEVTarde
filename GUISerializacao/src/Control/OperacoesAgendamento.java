@@ -6,7 +6,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 import Model.Agenda;
-import Model.Usuario;
+
 
 public class OperacoesAgendamento {
     // atributos
@@ -48,9 +48,9 @@ public class OperacoesAgendamento {
         atualizarTabela();
     }
 
-    // public void salvarAgendas() {
-    //     Serializacao.serializar("dados.txt", agendas);
-    // }
+    public void salvarAgendas() {
+        Serializacao.serializarAgenda("dadosAgenda.txt", agendas);
+    }
 
     private void atualizarTabela() {
         tableModel.setRowCount(0);
