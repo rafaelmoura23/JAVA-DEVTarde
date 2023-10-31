@@ -37,4 +37,40 @@ public class ConnectionDAO {
             ConnectionFactory.closeConnection(this.connection);
         }
     }
+
+    public void inserir(String nome, String email) throws SQLException {
+        String sql = "INSERT INTO MINHA_TABELA (NOME, EMAIL) VALUES (?, ?)";
+        PreparedStatement stmt = connection.prepareStatement(sql);
+        try {
+            stmt.setString(1, nome);
+            stmt.setString(2, email);
+            stmt.executeUpdate();
+            System.out.println("Dados inseridos com sucesso");
+            ConnectionFactory.closeConnection(stmt);
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao inserir dados no banco de dados.", e);
+        } finally {
+            ConnectionFactory.closeConnection(this.connection);
+        }
+    }
+
+    public void buscarPorId(int id) {
+        String sql = "SELECT * FROM MINHA_TABELA WHERE ID = ?";
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            ResultSet resultSet = stmt.executeQuery();
+            while (resultSet.next()) {
+                int idBuscado = resultSet.getInt("ID");
+                String nomeBuscado = resultSet.getString("NOME");
+                String emailBuscado = resultSet.getString("EMAIL");
+                System.out.println("o Resultado da busca é id " + idBuscado + " nome: " +
+
+                        nomeBuscado + " email: " + emailBuscado);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao buscar dados no banco de dados.", e);
+        } finally {
+            ConnectionFactory.closeConnection(this.connection);
+        }
+    }
 }

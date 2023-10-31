@@ -1,7 +1,9 @@
 package Connection;
 
+import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class ConnectionFactory {
@@ -28,4 +30,26 @@ public class ConnectionFactory {
             ex.printStackTrace();
         }
     }
+
+    public static void closeConnection(Connection connection, PreparedStatement stmt) {
+        try {
+            if (connection != null && stmt != null) {
+                connection.close();
+                stmt.close();
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+     public static void closeConnection(PreparedStatement stmt) {
+        try {
+            if (stmt != null) {
+                stmt.close();
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+
 }
