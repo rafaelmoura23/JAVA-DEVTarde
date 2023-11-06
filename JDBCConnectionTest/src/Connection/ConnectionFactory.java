@@ -7,15 +7,15 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class ConnectionFactory {
-    // atributos
+    // atributos                                                        nome do bd
     private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
-    private static final String USUARIO = "postgres";
+    private static final String USUARIO = "postgres"; // ADM do banco de dados
     private static final String SENHA = "postgres";
 
     // métodos
     public static Connection getConnection() {
         try {
-            return DriverManager.getConnection(URL, USUARIO, SENHA);
+            return DriverManager.getConnection(URL, USUARIO, SENHA); // acessa o drive baixado de acordo com o banco de dados na pasta lib 
         } catch (SQLException e) {
             throw new RuntimeException("Erro ao obter conexão com o banco de dados.", e);
         }

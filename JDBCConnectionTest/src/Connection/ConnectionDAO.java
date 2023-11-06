@@ -9,6 +9,7 @@ import java.sql.Statement;
 public class ConnectionDAO {
     private Connection connection;
 
+    // construtor
     public ConnectionDAO() {
         this.connection = ConnectionFactory.getConnection();
     }
@@ -63,9 +64,9 @@ public class ConnectionDAO {
                 int idBuscado = resultSet.getInt("ID");
                 String nomeBuscado = resultSet.getString("NOME");
                 String emailBuscado = resultSet.getString("EMAIL");
-                System.out.println("o Resultado da busca é id " + idBuscado + " nome: " +
+                System.out.println("Resultado da busca pelo id " + idBuscado + " \nNome: " +
 
-                        nomeBuscado + " email: " + emailBuscado);
+                        nomeBuscado + " \nEmail: " + emailBuscado);
             }
         } catch (SQLException e) {
             throw new RuntimeException("Erro ao buscar dados no banco de dados.", e);
