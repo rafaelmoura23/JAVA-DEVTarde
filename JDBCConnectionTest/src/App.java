@@ -7,7 +7,8 @@ public class App {
         //new ConnectionDAO().buscarPorId(1);
         //new ConnectionDAO().apagarTabela();
         //new ConnectionDAO().apagarID(4);
-        new ConnectionDAO().atualizarID(
-            3, "Rafael", "rafael@gmail.com");
+        //new ConnectionDAO().atualizarID(1, "Maria", "maria@gmail.com");
+        new ConnectionDAO().listarTodos();
+
     }
 }

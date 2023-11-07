@@ -125,4 +125,24 @@ public class ConnectionDAO {
         }
     }
 
+    // listar todos os valores cadastrados
+    //Listar todos os valores cadastrados
+    public void listarTodos() { // Colocar na tabela
+        ResultSet rs = null;
+        String sql = "SELECT * FROM minha_tabela";
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            //stmt.executeUpdate(sql);
+            rs = stmt.executeQuery();
+            while (rs.next()) {
+                System.out.println("id : "+rs.getInt("id")+
+                " nome: "+rs.getString("nome")+
+                " email: "+rs.getString("email")); 
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex);
+        } finally {
+            ConnectionFactory.closeConnection(connection);
+        }
+    }
+
 }
